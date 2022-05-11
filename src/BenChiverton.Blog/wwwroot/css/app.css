@@ -1,5 +1,9 @@
 /* CSS for markup in index.html, including loading screen */
 
+body{
+    margin: 0px;
+}
+
 app {
     position: relative;
     display: flex;
