@@ -3,4 +3,99 @@
     padding-top: 1.1rem;
 }
 /* /Shared/Header.razor.rz.scp.css */
+header[b-d8tbz6w8ht] {
+    width: 100%;
+    padding: 0 10px 0 10px;
+    position: fixed;
+    height: 50px;
+    background-color: white;
+    border-bottom: solid;
+    border-color: lightgreen;
+}
+
+.logo-container[b-d8tbz6w8ht] {
+    width: 200px;
+    position: absolute;
+    height: 50px;
+}
+
+.logo[b-d8tbz6w8ht] {
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav[b-d8tbz6w8ht] {
+    position: absolute;
+    height: 50px;
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button[b-d8tbz6w8ht] {
+    display: inline-block;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 1.2em;
+    border: hidden;
+    background-color: white;
+    cursor: pointer;
+}
+
+    .nav-button[b-d8tbz6w8ht]:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    .nav-button[b-d8tbz6w8ht]:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: lightgreen;
+        transition: all .3s;
+        z-index: -1;
+    }
+
+    .nav-button:hover[b-d8tbz6w8ht] {
+        color: #fff;
+    }
+
+        .nav-button:hover[b-d8tbz6w8ht]:before {
+            width: 100%;
+        }
+
+
+.top-menu ul[b-d8tbz6w8ht] {
+    float: right;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .top-menu ul li[b-d8tbz6w8ht] {
+        float: left;
+        padding-right: 18px;
+    }
 /* /Shared/MainLayout.razor.rz.scp.css */
+.container[b-5sn7flarxt] {
+}
+
+.main[b-5sn7flarxt] {
+    margin-top: 50px;
+}
