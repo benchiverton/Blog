@@ -24,3 +24,10 @@ app {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.page-loading-text {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    text-align: center
+}
