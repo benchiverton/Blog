@@ -2,10 +2,35 @@
 .content[b-359qpjt91s] {
     padding-top: 1.1rem;
 }
+/* /Shared/Footer.razor.rz.scp.css */
+.footer-container[b-gvtmglbr7o] {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    border-top: solid;
+    border-color: lightgreen;
+}
+
+.source-code-button[b-gvtmglbr7o] {
+    height: 50px;
+    border: hidden;
+    background-color: white;
+    cursor: pointer;
+    min-width: fit-content;
+    z-index: 1;
+    font-size: 1.2em;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+    .source-code-button *[b-gvtmglbr7o] {
+        margin: 0 5px 0 5px;
+    }
 /* /Shared/Header.razor.rz.scp.css */
 header[b-d8tbz6w8ht] {
     width: 100%;
-    padding: 0 10px 0 10px;
     position: relative;
     background-color: white;
     border-bottom: solid;
@@ -25,6 +50,7 @@ header[b-d8tbz6w8ht] {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 0 10px 0 10px;
 }
 
 nav[b-d8tbz6w8ht] {
@@ -34,7 +60,6 @@ nav[b-d8tbz6w8ht] {
 
 .nav-button[b-d8tbz6w8ht] {
     min-width: fit-content;
-    display: inline-block;
     transition: all .3s;
     position: relative;
     overflow: hidden;
@@ -76,7 +101,9 @@ nav[b-d8tbz6w8ht] {
         }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .container[b-5sn7flarxt] {
+    min-height: 100vh;
 }
 
 .main[b-5sn7flarxt] {
+    padding-bottom: 50px;
 }
