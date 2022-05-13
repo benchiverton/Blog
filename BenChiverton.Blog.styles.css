@@ -6,16 +6,15 @@
 header[b-d8tbz6w8ht] {
     width: 100%;
     padding: 0 10px 0 10px;
-    position: fixed;
-    height: 50px;
+    position: relative;
     background-color: white;
     border-bottom: solid;
     border-color: lightgreen;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, max-content));
 }
 
 .logo-container[b-d8tbz6w8ht] {
-    width: 200px;
-    position: absolute;
     height: 50px;
 }
 
@@ -29,14 +28,12 @@ header[b-d8tbz6w8ht] {
 }
 
 nav[b-d8tbz6w8ht] {
-    position: absolute;
-    height: 50px;
-    margin-left: 200px;
     display: flex;
     align-items: center;
 }
 
 .nav-button[b-d8tbz6w8ht] {
+    min-width: fit-content;
     display: inline-block;
     transition: all .3s;
     position: relative;
@@ -77,21 +74,6 @@ nav[b-d8tbz6w8ht] {
         .nav-button:hover[b-d8tbz6w8ht]:before {
             width: 100%;
         }
-
-
-.top-menu ul[b-d8tbz6w8ht] {
-    float: right;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-    .top-menu ul li[b-d8tbz6w8ht] {
-        float: left;
-        padding-right: 18px;
-    }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .container[b-5sn7flarxt] {
 }
