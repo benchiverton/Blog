@@ -1,16 +1,15 @@
 header {
     width: 100%;
     padding: 0 10px 0 10px;
-    position: fixed;
-    height: 50px;
+    position: relative;
     background-color: white;
     border-bottom: solid;
     border-color: lightgreen;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, max-content));
 }
 
 .logo-container {
-    width: 200px;
-    position: absolute;
     height: 50px;
 }
 
@@ -24,14 +23,12 @@ header {
 }
 
 nav {
-    position: absolute;
-    height: 50px;
-    margin-left: 200px;
     display: flex;
     align-items: center;
 }
 
 .nav-button {
+    min-width: fit-content;
     display: inline-block;
     transition: all .3s;
     position: relative;
@@ -72,18 +69,3 @@ nav {
         .nav-button:hover:before {
             width: 100%;
         }
-
-
-.top-menu ul {
-    float: right;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-    .top-menu ul li {
-        float: left;
-        padding-right: 18px;
-    }

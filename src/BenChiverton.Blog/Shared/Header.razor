@@ -1,27 +1,23 @@
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
 
 <header>
     <div class="logo-container">
         <div class="logo" @onclick="@(() => Navigate(""))">BC's blogs</div>
     </div>
     <nav class="top-menu">
-        <ul>
-            <li>
-                <button class="nav-button" @onclick="@(() => Navigate("Blogs"))">
-                    Blogs
-                </button>
-            </li>
-            <li>
-                <button class="nav-button" @onclick="@(() => Navigate("Projects"))">
-                    Projects
-                </button>
-            </li>
-            <li>
-                <button class="nav-button" @onclick="@(() => Navigate("About"))">
-                    About me
-                </button>
-            </li>
-        </ul>
+        <button class="nav-button" @onclick="@(() => Navigate("Blogs"))">
+            Blogs
+        </button>
+        <button class="nav-button" @onclick="@(() => Navigate("Projects"))">
+            Projects
+        </button>
+        <button class="nav-button" @onclick="@(() => Navigate("About"))">
+            About me
+        </button>
+        <button class="nav-button" @onclick="@(async () => await NavigateToNewTab("https://github.com/benchiverton/Blog"))">
+            Source code
+        </button>
     </nav>
 </header>
 
@@ -29,5 +25,10 @@
     private void Navigate(string page)
     {
         NavigationManager.NavigateTo(page);
+    }
+
+    private async Task NavigateToNewTab(string url)
+    {
+        await JsRuntime.InvokeAsync<object>("open", url, "_blank");
     }
 }
