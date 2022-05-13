@@ -23,9 +23,4 @@
     {
         NavigationManager.NavigateTo(page);
     }
-
-    private async Task NavigateToNewTab(string url)
-    {
-        await JsRuntime.InvokeAsync<object>("open", url, "_blank");
-    }
 }

@@ -1,5 +1,7 @@
 .container {
+    min-height: 100vh;
 }
 
 .main {
+    padding-bottom: 50px;
 }

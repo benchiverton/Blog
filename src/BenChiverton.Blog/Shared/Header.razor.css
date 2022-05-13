@@ -1,6 +1,5 @@
 header {
     width: 100%;
-    padding: 0 10px 0 10px;
     position: relative;
     background-color: white;
     border-bottom: solid;
@@ -20,6 +19,7 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 0 10px 0 10px;
 }
 
 nav {
@@ -29,7 +29,6 @@ nav {
 
 .nav-button {
     min-width: fit-content;
-    display: inline-block;
     transition: all .3s;
     position: relative;
     overflow: hidden;
