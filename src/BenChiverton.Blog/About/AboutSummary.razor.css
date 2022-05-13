@@ -1,0 +1,11 @@
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    word-break: break-word;
+}
+
+.about-image {
+    max-width: 200px;
+    float: right;
+    margin: 20px;
+}

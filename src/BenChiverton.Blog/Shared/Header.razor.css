@@ -13,6 +13,7 @@ header {
 }
 
 .logo {
+    width: min-content;
     height: 100%;
     font-size: 1.5em;
     font-weight: bold;
@@ -20,6 +21,7 @@ header {
     align-items: center;
     cursor: pointer;
     padding: 0 10px 0 10px;
+    white-space: nowrap;
 }
 
 nav {
