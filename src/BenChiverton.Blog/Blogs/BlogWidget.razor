@@ -1,0 +1,17 @@
+<h2>Blogs</h2>
+
+<div class="widget-container">
+    @foreach (var blog in _blogs)
+    {
+        <BlogSummary Details="@blog" />
+    }
+</div>
+
+@code {
+    private readonly List<BlogDetails> _blogs = new List<BlogDetails>
+    {
+        new BlogDetails("Blog1", "#", "xdxdxdx dxdx xdx dxx dx xdxx dxxdxd xxdxx dxdx"),
+        new BlogDetails("Blog2", "#", "xdxdxdx dxdx xdx dxx dx xdxx dxxdxd xxdxx dxdx"),
+        new BlogDetails("Blog3", "#", "xdxdxdx dxdx xdx dxx dx xdxx dxxdxd xxdxx dxdx"),
+    };
+}

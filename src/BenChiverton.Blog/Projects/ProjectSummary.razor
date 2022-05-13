@@ -1,0 +1,18 @@
+@inject IJSRuntime JsRuntime
+
+<div class="summary-container">
+    <a href="@Details.Url">
+        <div class="name-text">@Details.Name</div>
+        <div class="description-text">@Details.Description</div>
+    </a>
+</div>
+
+@code {
+    [Parameter]
+    public ProjectDetails Details { get; set; }
+
+    private async Task NavigateToProjectInNewTab()
+    {
+        await JsRuntime.InvokeAsync<object>("open", Details.Url, "_blank");
+    }
+}

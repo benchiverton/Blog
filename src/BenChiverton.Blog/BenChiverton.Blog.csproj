@@ -13,10 +13,4 @@
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Blogs\" />
-    <Folder Include="Projects\" />
-    <Folder Include="wwwroot\images\" />
-  </ItemGroup>
-
 </Project>

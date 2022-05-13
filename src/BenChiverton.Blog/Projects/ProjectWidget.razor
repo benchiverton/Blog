@@ -1,0 +1,17 @@
+<h2>Projects</h2>
+
+<div class="widget-container">
+    @foreach (var project in _projects)
+    {
+        <ProjectSummary Details="@project" />
+    }
+</div>
+
+@code {
+    private readonly List<ProjectDetails> _projects = new List<ProjectDetails>
+    {
+        new ProjectDetails("Project1", "#", "lmao lmao lmaolmaolmaov lmaolmaolmaovlmao lmao"),
+        new ProjectDetails("Project2", "#", "lmao lmao lmaolmaolmaov lmaolmaolmaovlmao lmao"),
+        new ProjectDetails("Project3", "#", "lmao lmao lmaolmaolmaov lmaolmaolmaovlmao lmao"),
+    };
+}

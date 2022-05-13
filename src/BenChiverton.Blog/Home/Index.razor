@@ -1,9 +1,16 @@
 @page "/"
 
 @using BenChiverton.Blog.About;
+@using BenChiverton.Blog.Blogs;
+@using BenChiverton.Blog.Projects;
 
 <AboutSummary />
 
 <div class="widget-container">
-    <h1>Coming soon!</h1>
+    <div class="project-widget">
+        <ProjectWidget />
+    </div>
+    <div class="blog-widget">
+        <BlogWidget />
+    </div>
 </div>

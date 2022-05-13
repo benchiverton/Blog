@@ -1,0 +1,14 @@
+.summary-container {
+    padding: 10px;
+    border-top: solid;
+    border-color: lightgreen;
+}
+
+.name-text {
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.description-text {
+    font-size: 1em;
+}
