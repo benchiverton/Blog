@@ -2,13 +2,22 @@
 .about-container[b-y6cm1bcxkq] {
     display: flex;
     justify-content: space-evenly;
-    word-break: break-word;
 }
 
 .about-image[b-y6cm1bcxkq] {
     max-width: 200px;
     float: right;
     margin: 20px;
+}
+
+.spacer[b-y6cm1bcxkq] {
+    height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .spacer[b-y6cm1bcxkq] {
+        height: 0;
+    }
 }
 /* /About/Index.razor.rz.scp.css */
 /* /Home/Index.razor.rz.scp.css */
