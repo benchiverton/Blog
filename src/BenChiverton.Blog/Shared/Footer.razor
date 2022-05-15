@@ -1,4 +1,4 @@
-@inject IJSRuntime JsRuntime
+@inject IJSRuntime _jsRuntime
 
 <div class="footer-container">
     <button class="source-code-button" @onclick="@(async () => await NavigateToNewTab("https://github.com/benchiverton/Blog"))">
@@ -12,6 +12,6 @@
 @code {
     private async Task NavigateToNewTab(string url)
     {
-        await JsRuntime.InvokeAsync<object>("open", url, "_blank");
+        await _jsRuntime.InvokeAsync<object>("open", url, "_blank");
     }
 }

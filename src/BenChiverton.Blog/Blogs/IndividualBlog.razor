@@ -1,0 +1,54 @@
+@page "/blogpage/{BlogId}"
+
+@inject IBlogService _blogService;
+@inject HttpClient _httpClient;
+@inject IJSRuntime _jsRuntime;
+
+@if (!IsLoading())
+{
+    if (_blogExists.Value)
+    {
+        @if (!string.IsNullOrEmpty(_readmeContent))
+        {
+            <MarkdownComponent RawMarkdown="@_readmeContent" />
+        }
+    }
+    else
+    {
+        <div class="blog-not-found">
+            <h3>Blog does not exist.</h3>
+        </div>
+    }
+}
+else
+{
+    <div class="page-loading-text">
+        <h1>BC's blog</h1>
+        <p>The blog is loading...</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string BlogId { get; set; }
+
+    private bool? _blogExists;
+    private BlogDetails _blogDetails;
+
+    private string _readmeContent;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _blogExists = _blogService.TryGetBlogDetails(BlogId, out _blogDetails);
+
+        var readmePage = await _httpClient.GetAsync(_blogDetails.MarkdownUrl);
+        _readmeContent = (await readmePage.Content.ReadAsStringAsync()).ReplaceRelativeImageLocations(_blogDetails.MarkdownUrl);
+    }
+
+    private bool IsLoading() => _blogExists.HasValue ? false : true;
+
+    private async Task NavigateToNewTab(string url)
+    {
+        await _jsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+}

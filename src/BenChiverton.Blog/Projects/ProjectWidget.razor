@@ -1,17 +1,45 @@
+@inject IProjectService _projectService
+@inject NavigationManager _navigationManager;
+
 <h2>Projects</h2>
 
 <div class="widget-container">
     @foreach (var project in _projects)
     {
-        <ProjectSummary Details="@project" />
+        <ProjectSummary ProjectId="@project.Key" ProjectDetails="@project.Value" />
+    }
+    @if (_isLimited)
+    {
+        <div class="is-limited" @onclick="@NavigateToProjects">
+            <h4>See more...</h4>
+        </div>
     }
 </div>
 
 @code {
-    private readonly List<ProjectDetails> _projects = new List<ProjectDetails>
+    [Parameter]
+    public int? MaxProjects { get; set; }
+
+    private IReadOnlyDictionary<string, ProjectDetails> _projects;
+    private bool _isLimited;
+
+    protected override void OnParametersSet()
     {
-        new ProjectDetails("Project1", "#", "lmao lmao lmaolmaolmaov lmaolmaolmaovlmao lmao"),
-        new ProjectDetails("Project2", "#", "lmao lmao lmaolmaolmaov lmaolmaolmaovlmao lmao"),
-        new ProjectDetails("Project3", "#", "lmao lmao lmaolmaolmaov lmaolmaolmaovlmao lmao"),
-    };
+        var projects = _projectService.GetProjects();
+        if (MaxProjects.HasValue)
+        {
+            _projects = projects.Take(MaxProjects.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            _isLimited = true;
+        }
+        else
+        {
+            _projects = projects;
+            _isLimited = false;
+        }
+    }
+
+    private void NavigateToProjects()
+    {
+        _navigationManager.NavigateTo($"projects");
+    }
 }

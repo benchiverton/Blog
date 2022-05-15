@@ -1,8 +1,7 @@
-namespace BenChiverton.Blog.Blogs
-{
-    public record BlogDetails(
-        string Name,
-        string Url,
-        string Description
-    );
-}
+namespace BenChiverton.Blog.Blogs;
+
+public record BlogDetails(
+    string Name,
+    string Description,
+    string MarkdownUrl
+);

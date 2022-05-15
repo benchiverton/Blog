@@ -1,17 +1,45 @@
+@inject IBlogService _blogService
+@inject NavigationManager _navigationManager;
+
 <h2>Blogs</h2>
 
 <div class="widget-container">
     @foreach (var blog in _blogs)
     {
-        <BlogSummary Details="@blog" />
+        <BlogSummary BlogId="@blog.Key" BlogDetails="@blog.Value" />
+    }
+    @if (_isLimited)
+    {
+        <div class="is-limited" @onclick="@NavigateToBlogs">
+            <h4>See more...</h4>
+        </div>
     }
 </div>
 
 @code {
-    private readonly List<BlogDetails> _blogs = new List<BlogDetails>
+    [Parameter]
+    public int? MaxBlogs { get; set; }
+
+    private IReadOnlyDictionary<string, BlogDetails> _blogs;
+    private bool _isLimited;
+
+    protected override void OnParametersSet()
     {
-        new BlogDetails("Blog1", "#", "xdxdxdx dxdx xdx dxx dx xdxx dxxdxd xxdxx dxdx"),
-        new BlogDetails("Blog2", "#", "xdxdxdx dxdx xdx dxx dx xdxx dxxdxd xxdxx dxdx"),
-        new BlogDetails("Blog3", "#", "xdxdxdx dxdx xdx dxx dx xdxx dxxdxd xxdxx dxdx"),
-    };
+        var blogs = _blogService.GetBlogs();
+        if (MaxBlogs.HasValue)
+        {
+            _blogs = blogs.Take(MaxBlogs.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            _isLimited = true;
+        }
+        else
+        {
+            _blogs = blogs;
+            _isLimited = false;
+        }
+    }
+
+    private void NavigateToBlogs()
+    {
+        _navigationManager.NavigateTo($"blogs");
+    }
 }

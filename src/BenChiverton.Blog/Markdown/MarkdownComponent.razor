@@ -1,0 +1,26 @@
+@inject IJSRuntime _jsRuntime;
+
+<div class="markdown-contents">
+    @((MarkupString)_readmeHtml)
+</div>
+
+@code {
+    [Parameter]
+    public string RawMarkdown { get; set; }
+
+    private string _readmeHtml;
+
+    protected override void OnParametersSet()
+    {
+        var pipeline = new MarkdownPipelineBuilder()
+            .UseAdvancedExtensions()
+            .Build();
+        _readmeHtml = Markdown.ToHtml(RawMarkdown, pipeline);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await _jsRuntime.InvokeVoidAsync("renderMermaidDiagrams");
+        await _jsRuntime.InvokeVoidAsync("renderMathjaxEquations");
+    }
+}

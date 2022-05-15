@@ -1,4 +1,4 @@
-@inject NavigationManager NavigationManager
+@inject NavigationManager _navigationManager
 
 <header>
     <div class="logo-container">
@@ -20,6 +20,6 @@
 @code {
     private void Navigate(string page)
     {
-        NavigationManager.NavigateTo(page);
+        _navigationManager.NavigateTo(page);
     }
 }

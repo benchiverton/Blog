@@ -1,6 +1,6 @@
 /* CSS for markup in index.html, including loading screen */
 
-body{
+body {
     margin: 0px;
 }
 
@@ -33,5 +33,16 @@ app {
     position: absolute;
     top: 30vh;
     width: 100%;
-    text-align: center
+    text-align: center;
+}
+
+/*for some reason, the markdown component is playing up with local css...*/
+.markdown-contents table {
+    border-collapse: collapse;
+}
+.markdown-contents th, td {
+    border: 1px solid black;
+}
+.markdown-contents img {
+    max-width: 100%;
 }

@@ -1,0 +1,23 @@
+.project-not-found {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    text-align: center;
+}
+
+.source-code-button {
+    height: 50px;
+    border: hidden;
+    background-color: white;
+    cursor: pointer;
+    min-width: fit-content;
+    z-index: 1;
+    font-size: 1.2em;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+    .source-code-button * {
+        margin: 0 5px 0 5px;
+    }

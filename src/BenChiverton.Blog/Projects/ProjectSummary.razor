@@ -1,18 +1,19 @@
-@inject IJSRuntime JsRuntime
+@inject NavigationManager _navigationManager
 
-<div class="summary-container">
-    <a href="@Details.Url">
-        <div class="name-text">@Details.Name</div>
-        <div class="description-text">@Details.Description</div>
-    </a>
+<div class="summary-container" @onclick="NavigateToProject">
+    <div class="name-text">@ProjectDetails.Name</div>
+    <div class="description-text">@ProjectDetails.Description</div>
 </div>
 
 @code {
     [Parameter]
-    public ProjectDetails Details { get; set; }
+    public string ProjectId { get; set; }
 
-    private async Task NavigateToProjectInNewTab()
+    [Parameter]
+    public ProjectDetails ProjectDetails { get; set; }
+
+    private void NavigateToProject()
     {
-        await JsRuntime.InvokeAsync<object>("open", Details.Url, "_blank");
+        _navigationManager.NavigateTo($"project/{ProjectId}");
     }
 }

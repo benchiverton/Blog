@@ -1,0 +1,61 @@
+@page "/project/{ProjectId}"
+
+@inject IProjectService _projectService;
+@inject HttpClient _httpClient;
+@inject IJSRuntime _jsRuntime;
+
+@if (!IsLoading())
+{
+    if (_projectExists.Value)
+    {
+        @*for now, just show the readme of the project*@
+        <button class="source-code-button" @onclick="@(async () => await NavigateToNewTab(_projectDetails.ProjectUrl))">
+            <img src="images/GitHub-Mark-32px.png" />
+            <div class="source-code-button-text">
+                View this projects source code
+            </div>
+        </button>
+        @if (!string.IsNullOrEmpty(_readmeContent))
+        {
+            <MarkdownComponent RawMarkdown="@_readmeContent" />
+        }
+    }
+    else
+    {
+        <div class="project-not-found">
+            <h3>Project does not exist.</h3>
+        </div>
+    }
+}
+else
+{
+    <div class="page-loading-text">
+        <h1>BC's blog</h1>
+        <p>The project is loading...</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string ProjectId { get; set; }
+
+    private bool? _projectExists;
+    private ProjectDetails _projectDetails;
+
+    private string _readmeContent;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _projectExists = _projectService.TryGetProjectDetails(ProjectId, out _projectDetails);
+
+        var readmePage = await _httpClient.GetAsync(_projectDetails.ReadmeUrl);
+        _readmeContent = (await readmePage.Content.ReadAsStringAsync()).ReplaceRelativeImageLocations(_projectDetails.ReadmeUrl);
+    }
+
+    private bool IsLoading() => _projectExists.HasValue ? false : true;
+
+    private async Task NavigateToNewTab(string url)
+    {
+        await _jsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+}

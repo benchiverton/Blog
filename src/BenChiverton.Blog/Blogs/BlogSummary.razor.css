@@ -2,6 +2,7 @@
     padding: 10px;
     border-top: solid;
     border-color: lightgreen;
+    cursor: pointer;
 }
 
 .name-text {
