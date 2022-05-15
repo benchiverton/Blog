@@ -1,3 +1,4 @@
+/* /About/About.razor.rz.scp.css */
 /* /About/AboutSummary.razor.rz.scp.css */
 .about-container[b-y6cm1bcxkq] {
     display: flex;
@@ -19,12 +20,13 @@
         height: 0;
     }
 }
-/* /About/Index.razor.rz.scp.css */
+/* /Blogs/Blogs.razor.rz.scp.css */
 /* /Blogs/BlogSummary.razor.rz.scp.css */
 .summary-container[b-jf9tc8rt7u] {
     padding: 10px;
     border-top: solid;
     border-color: lightgreen;
+    cursor: pointer;
 }
 
 .name-text[b-jf9tc8rt7u] {
@@ -36,31 +38,61 @@
     font-size: 1em;
 }
 /* /Blogs/BlogWidget.razor.rz.scp.css */
-.about-container[b-4grcggpj67] {
-    display: flex;
-    justify-content: space-evenly;
+.is-limited[b-4grcggpj67] {
+    cursor: pointer;
 }
-
-.about-image[b-4grcggpj67] {
-    max-width: 200px;
-    float: right;
-    margin: 20px;
+/* /Blogs/IndividualBlog.razor.rz.scp.css */
+.project-not-found[b-3ic48d5n5w] {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    text-align: center;
 }
-/* /Home/Index.razor.rz.scp.css */
-.content[b-359qpjt91s] {
+/* /Home/Home.razor.rz.scp.css */
+.content[b-6vpnm4whpw] {
     padding-top: 1.1rem;
 }
 
-.widget-container[b-359qpjt91s] {
+.widget-container[b-6vpnm4whpw] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 2rem;
 }
+/* /Markdown/MarkdownComponent.razor.rz.scp.css */
+.markdown-contents .*[b-0zwz1lqz6q] {
+    max-width: 100%;
+}
+/* /Projects/IndividualProject.razor.rz.scp.css */
+.project-not-found[b-80hklbke03] {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    text-align: center;
+}
+
+.source-code-button[b-80hklbke03] {
+    height: 50px;
+    border: hidden;
+    background-color: white;
+    cursor: pointer;
+    min-width: fit-content;
+    z-index: 1;
+    font-size: 1.2em;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+    .source-code-button *[b-80hklbke03] {
+        margin: 0 5px 0 5px;
+    }
+/* /Projects/Projects.razor.rz.scp.css */
 /* /Projects/ProjectSummary.razor.rz.scp.css */
 .summary-container[b-uka8hmpxh6] {
     padding: 10px;
     border-top: solid;
     border-color: lightgreen;
+    cursor: pointer;
 }
 
 .name-text[b-uka8hmpxh6] {
@@ -72,15 +104,8 @@
     font-size: 1em;
 }
 /* /Projects/ProjectWidget.razor.rz.scp.css */
-.about-container[b-1q81ugmh92] {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.about-image[b-1q81ugmh92] {
-    max-width: 200px;
-    float: right;
-    margin: 20px;
+.is-limited[b-1q81ugmh92] {
+    cursor: pointer;
 }
 /* /Shared/Footer.razor.rz.scp.css */
 .footer-container[b-gvtmglbr7o] {
