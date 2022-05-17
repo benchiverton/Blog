@@ -2,6 +2,11 @@
 
 body {
     margin: 0px;
+    font-family: 'Inconsolata', monospace;
+}
+
+button {
+    font-family: 'Inconsolata', monospace;
 }
 
 app {
