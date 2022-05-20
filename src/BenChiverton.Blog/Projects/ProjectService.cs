@@ -60,7 +60,7 @@ public class ProjectService : IProjectService
         {
             "imfpredict",
             new ProjectDetails(
-                "Protein Sequences Spark Library",
+                "Predicting currency performance",
                 "Python project analysing & predicting currency performance using data from International Monetary Fund (IMF).",
                 "https://github.com/benchiverton/imfpredict",
                 "https://raw.githubusercontent.com/benchiverton/imfpredict/main/README.md"
