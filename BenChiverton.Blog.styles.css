@@ -43,7 +43,7 @@
 .summary-container[b-jf9tc8rt7u] {
     padding: 10px;
     border-top: solid;
-    border-color: lightgreen;
+    border-color: var(--green);
     cursor: pointer;
 }
 
@@ -91,7 +91,7 @@
 .source-code-button[b-80hklbke03] {
     height: 50px;
     border: hidden;
-    background-color: white;
+    background-color: var(--background-color);
     cursor: pointer;
     min-width: fit-content;
     z-index: 1;
@@ -109,7 +109,7 @@
 .summary-container[b-uka8hmpxh6] {
     padding: 10px;
     border-top: solid;
-    border-color: lightgreen;
+    border-color: var(--green);
     cursor: pointer;
 }
 
@@ -128,17 +128,18 @@
 /* /Shared/Footer.razor.rz.scp.css */
 .footer-container[b-gvtmglbr7o] {
     width: 100%;
-    background-color: white;
+    background-color: var(--background-color);
     position: absolute;
     bottom: 0;
     border-top: solid;
-    border-color: lightgreen;
+    border-color: var(--green);
 }
 
 .source-code-button[b-gvtmglbr7o] {
     height: 50px;
     border: hidden;
-    background-color: white;
+    color: var(--font-color);
+    background-color: var(--background-color);
     cursor: pointer;
     min-width: fit-content;
     z-index: 1;
@@ -155,15 +156,18 @@
 header[b-d8tbz6w8ht] {
     width: 100%;
     position: relative;
-    background-color: white;
+    background-color: var(--background-color);
     border-bottom: solid;
-    border-color: lightgreen;
+    border-color: var(--green);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 200px));
+    column-gap: 50px;
 }
 
 .logo-container[b-d8tbz6w8ht] {
     height: 50px;
+    min-width: max-content;
+    width: max-content;
 }
 
 .logo[b-d8tbz6w8ht] {
@@ -174,24 +178,26 @@ header[b-d8tbz6w8ht] {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 0 10px 0 10px;
+    padding: 0 0 0 10px;
     white-space: nowrap;
 }
 
-nav[b-d8tbz6w8ht] {
+.top-menu[b-d8tbz6w8ht] {
     display: flex;
     align-items: center;
+    min-width: max-content;
+    width: max-content;
 }
 
 .nav-button[b-d8tbz6w8ht] {
-    min-width: fit-content;
+    min-width: max-content;
+    width: max-content;
     transition: all .3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
     font-size: 1.2em;
     border: hidden;
-    background-color: white;
     cursor: pointer;
 }
 
@@ -203,6 +209,7 @@ nav[b-d8tbz6w8ht] {
         width: 100%;
         height: 100%;
         z-index: -2;
+        background-color: var(--background-color);
     }
 
     .nav-button[b-d8tbz6w8ht]:before {
@@ -212,7 +219,7 @@ nav[b-d8tbz6w8ht] {
         left: 0;
         width: 0%;
         height: 100%;
-        background-color: lightgreen;
+        background-color: var(--green);
         transition: all .3s;
         z-index: -1;
     }
@@ -224,9 +231,23 @@ nav[b-d8tbz6w8ht] {
         .nav-button:hover[b-d8tbz6w8ht]:before {
             width: 100%;
         }
+
+
+.colour-theme-toggle-container[b-d8tbz6w8ht] {
+    width: 120px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.colour-theme-toggle-select[b-d8tbz6w8ht] {
+    width: 100%;
+    margin: 10px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .container[b-5sn7flarxt] {
     min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 .main[b-5sn7flarxt] {

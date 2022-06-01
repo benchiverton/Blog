@@ -38,7 +38,7 @@
         </div>
     </app>
 
-    <!-- Start Single Page Apps for GitHub Pages -->
+    <!-- Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
         // Single Page Apps for GitHub Pages
         // https://github.com/rafrex/spa-github-pages
@@ -68,16 +68,22 @@
             }
         }(window.location))
     </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-    <!-- Start mermaid libraries used in blogs -->
+
+    <!-- local storage -->
+    <script>
+        function addToLocalStorage(key, value) { localStorage[key] = value; }
+        function readLocalStorage(key) { return localStorage[key]; }
+    </script>
+
+    <!-- mermaid libraries used in blogs -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
         window.renderMermaidDiagrams = () => {
             mermaid.init();
         }
     </script>
-    <!-- End mermaid libraries used in blogs -->
-    <!-- Start mathjax libraries used in blogs -->
+
+    <!-- mathjax libraries used in blogs -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
@@ -85,7 +91,6 @@
             MathJax.typesetPromise();
         }
     </script>
-    <!-- End mathjax libraries used in blogs -->
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
