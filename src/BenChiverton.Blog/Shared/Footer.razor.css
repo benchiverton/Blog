@@ -1,16 +1,17 @@
 .footer-container {
     width: 100%;
-    background-color: white;
+    background-color: var(--background-color);
     position: absolute;
     bottom: 0;
     border-top: solid;
-    border-color: lightgreen;
+    border-color: var(--green);
 }
 
 .source-code-button {
     height: 50px;
     border: hidden;
-    background-color: white;
+    color: var(--font-color);
+    background-color: var(--background-color);
     cursor: pointer;
     min-width: fit-content;
     z-index: 1;

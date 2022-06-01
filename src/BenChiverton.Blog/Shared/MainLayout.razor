@@ -1,7 +1,9 @@
 @inherits LayoutComponentBase
 
-<div class="container">
-    <Header />
+@inject IJSRuntime _jsRuntime;
+
+<div class="container @GetSelectedColourThemeClass()">
+    <Header InitialColourTheme="@_selectedColourTheme" OnColourThemeChanged="@OnColourThemeChanged"/>
 
     <div class="main">
         @Body
@@ -11,4 +13,31 @@
 </div>
 
 @code {
+    private readonly string _themeKey = "theme";
+    private ColourTheme _selectedColourTheme = ColourTheme.Light;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var themeFromStorage = await _jsRuntime.InvokeAsync<string>("readLocalStorage", _themeKey);
+        if (!string.IsNullOrEmpty(themeFromStorage))
+        {
+            Enum.TryParse(themeFromStorage, out _selectedColourTheme);
+        }
+    }
+
+    private void OnColourThemeChanged(ColourTheme newTheme)
+    {
+        _selectedColourTheme = newTheme;
+        _jsRuntime.InvokeVoidAsync("addToLocalStorage", _themeKey, newTheme.ToString());
+        StateHasChanged();
+    }
+
+    private string GetSelectedColourThemeClass()
+    {
+        return _selectedColourTheme switch
+        {
+            ColourTheme.Light => "light-mode",
+            ColourTheme.Dark => "dark-mode",
+        };
+    }
 }

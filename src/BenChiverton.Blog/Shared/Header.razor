@@ -15,11 +15,28 @@
             About me
         </button>
     </nav>
+    <div class="colour-theme-toggle-container">
+        <select class="colour-theme-toggle-select" @onchange="ChangingTheme">
+            @foreach (var colourTheme in Enum.GetValues<ColourTheme>())
+            {
+                <option selected="@IsInitialColourTheme(colourTheme)" value="@colourTheme">@colourTheme theme</option>
+            }
+        </select>
+    </div>
 </header>
 
 @code {
+    [Parameter]
+    public ColourTheme InitialColourTheme { get; set; }
+    [Parameter]
+    public Action<ColourTheme> OnColourThemeChanged { get; set; }
+
     private void Navigate(string page)
     {
         _navigationManager.NavigateTo(page);
     }
+
+    private bool IsInitialColourTheme(ColourTheme theme) => theme == InitialColourTheme;
+
+    private void ChangingTheme(ChangeEventArgs e) => OnColourThemeChanged(Enum.Parse<ColourTheme>(e.Value.ToString()));
 }

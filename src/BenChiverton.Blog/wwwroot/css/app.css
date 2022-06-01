@@ -1,4 +1,16 @@
-/* CSS for markup in index.html, including loading screen */
+:root {
+    --green: #90EE90
+}
+
+.light-mode {
+    --background-color: #ffffff;
+    --font-color: #000000;
+}
+
+.dark-mode {
+    --background-color: #000000;
+    --font-color: #ffffff;
+}
 
 body {
     margin: 0px;
@@ -6,6 +18,14 @@ body {
 }
 
 button {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: 'Inconsolata', monospace;
+}
+
+select {
+    background-color: var(--background-color);
+    color: var(--font-color);
     font-family: 'Inconsolata', monospace;
 }
 
@@ -46,7 +66,7 @@ app {
     border-collapse: collapse;
 }
 .markdown-contents th, td {
-    border: 1px solid black;
+    border: 1px solid var(--font-color);
 }
 .markdown-contents img {
     max-width: 100%;

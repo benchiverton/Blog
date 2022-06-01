@@ -1,7 +1,7 @@
 .summary-container {
     padding: 10px;
     border-top: solid;
-    border-color: lightgreen;
+    border-color: var(--green);
     cursor: pointer;
 }
 
