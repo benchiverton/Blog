@@ -38,7 +38,6 @@ header {
 
 .nav-button {
     width: max-content;
-    transition: all .3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -89,4 +88,7 @@ header {
     width: 100%;
     margin: 10px;
     height: 25px;
+    border-color: var(--green);
+    border-width: 2px;
+    border-radius: 2px;
 }
