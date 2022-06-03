@@ -4,11 +4,11 @@
 
 .light-mode {
     --background-color: #ffffff;
-    --font-color: #000000;
+    --font-color: #121212;
 }
 
 .dark-mode {
-    --background-color: #000000;
+    --background-color: #121212;
     --font-color: #ffffff;
 }
 
