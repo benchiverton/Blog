@@ -193,7 +193,6 @@ header[b-d8tbz6w8ht] {
 
 .nav-button[b-d8tbz6w8ht] {
     width: max-content;
-    transition: all .3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -244,6 +243,9 @@ header[b-d8tbz6w8ht] {
     width: 100%;
     margin: 10px;
     height: 25px;
+    border-color: var(--green);
+    border-width: 2px;
+    border-radius: 2px;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .container[b-5sn7flarxt] {
