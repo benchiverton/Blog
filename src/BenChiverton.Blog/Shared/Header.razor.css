@@ -5,14 +5,18 @@ header {
     border-bottom: solid;
     border-color: var(--green);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 200px));
+    grid-template-columns: 150px 300px;
     column-gap: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        grid-template-columns: unset;
+    }
 }
 
 .logo-container {
     height: 50px;
-    min-width: max-content;
-    width: max-content;
 }
 
 .logo {
@@ -30,12 +34,9 @@ header {
 .top-menu {
     display: flex;
     align-items: center;
-    min-width: max-content;
-    width: max-content;
 }
 
 .nav-button {
-    min-width: max-content;
     width: max-content;
     transition: all .3s;
     position: relative;
@@ -79,12 +80,13 @@ header {
 
 
 .colour-theme-toggle-container {
+    position: absolute;
+    right: 50px;
     width: 120px;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .colour-theme-toggle-select {
     width: 100%;
     margin: 10px;
+    height: 25px;
 }
