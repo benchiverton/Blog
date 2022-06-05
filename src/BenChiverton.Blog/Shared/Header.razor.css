@@ -38,6 +38,7 @@ header {
 
 .nav-button {
     width: max-content;
+    min-width: max-content;
     position: relative;
     overflow: hidden;
     z-index: 1;
