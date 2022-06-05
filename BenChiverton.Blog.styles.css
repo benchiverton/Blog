@@ -193,6 +193,7 @@ header[b-d8tbz6w8ht] {
 
 .nav-button[b-d8tbz6w8ht] {
     width: max-content;
+    min-width: max-content;
     position: relative;
     overflow: hidden;
     z-index: 1;
