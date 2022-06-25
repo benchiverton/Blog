@@ -34,7 +34,7 @@ public class ProjectService : IProjectService
             "OutboxPattern",
             new ProjectDetails(
                 "Outbox Pattern",
-                "Dotnet applications that help visualise the outboc pattern by implementing it in several ways. Usese Web API's and NServiceBus.",
+                "Dotnet applications that help visualise the outbox pattern by implementing it in several ways. Usese Web API's and NServiceBus.",
                 "https://github.com/benchiverton/OutboxPatternDemo",
                 "https://raw.githubusercontent.com/benchiverton/OutboxPatternDemo/main/README.md"
             )
