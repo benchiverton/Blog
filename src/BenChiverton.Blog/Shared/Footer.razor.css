@@ -24,3 +24,9 @@
     .source-code-button * {
         margin: 0 5px 0 5px;
     }
+
+.github-logo {
+    background: white;
+    border-radius: 50%;
+    border: solid 2px white;
+}
