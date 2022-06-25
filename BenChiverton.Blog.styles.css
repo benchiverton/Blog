@@ -104,6 +104,12 @@
     .source-code-button *[b-80hklbke03] {
         margin: 0 5px 0 5px;
     }
+
+.github-logo[b-80hklbke03] {
+    background: white;
+    border-radius: 50%;
+    border: solid 2px white;
+}
 /* /Projects/Projects.razor.rz.scp.css */
 /* /Projects/ProjectSummary.razor.rz.scp.css */
 .summary-container[b-uka8hmpxh6] {
@@ -152,6 +158,12 @@
     .source-code-button *[b-gvtmglbr7o] {
         margin: 0 5px 0 5px;
     }
+
+.github-logo[b-gvtmglbr7o] {
+    background: white;
+    border-radius: 50%;
+    border: solid 2px white;
+}
 /* /Shared/Header.razor.rz.scp.css */
 header[b-d8tbz6w8ht] {
     width: 100%;
