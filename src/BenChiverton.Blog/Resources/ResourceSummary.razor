@@ -1,0 +1,26 @@
+@inject NavigationManager _navigationManager
+@inject IJSRuntime _jsRuntime;
+
+<div class="summary-container">
+    <div class="name-text">@ResourceDetails.Name</div>
+    <div class="links">
+        @("Links: ")
+        @foreach (var link in ResourceDetails.ResourceLinks)
+        {
+            <a class="resource-link" href="@link.Value" target="_blank">[@link.Key]</a>
+            @(" ")
+        }
+    </div>
+    <div class="tags">
+        @("Tags: ")
+        @string.Join(", ", ResourceDetails.Tags)
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string ResourceId { get; set; }
+
+    [Parameter]
+    public ResourceDetails ResourceDetails { get; set; }
+}

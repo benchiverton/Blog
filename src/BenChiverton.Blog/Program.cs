@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using BenChiverton.Blog.Blogs;
 using BenChiverton.Blog.Projects;
+using BenChiverton.Blog.Resources;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -24,6 +25,7 @@ public class Program
 
         builder.Services.AddTransient<IBlogService, BlogService>();
         builder.Services.AddTransient<IProjectService, ProjectService>();
+        builder.Services.AddTransient<IResourceService, ResourceService>();
 
         var host = builder.Build();
 

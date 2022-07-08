@@ -1,0 +1,28 @@
+.summary-container {
+    padding: 10px;
+    border-top: solid;
+    border-color: var(--green);
+}
+
+.name-text {
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.description-text {
+    font-size: 1em;
+}
+
+.resource-link {
+    cursor: pointer;
+}
+
+    .resource-link:hover {
+        color: var(--green);
+        text-decoration: underline;
+    }
+
+.tags{
+    font-style: italic;
+    font-size: 0.8rem;
+}

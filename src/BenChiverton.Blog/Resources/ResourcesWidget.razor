@@ -1,0 +1,20 @@
+@inject IResourceService _resourceService;
+@inject NavigationManager _navigationManager;
+
+<h2>Resources</h2>
+
+<div class="widget-container">
+    @foreach (var resource in _resources)
+    {
+        <ResourceSummary ResourceId="@resource.Key" ResourceDetails="@resource.Value" />
+    }
+</div>
+
+@code {
+    private IReadOnlyDictionary<string, ResourceDetails> _resources;
+
+    protected override void OnParametersSet()
+    {
+        _resources = _resourceService.GetResources();
+    }
+}
