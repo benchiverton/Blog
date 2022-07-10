@@ -9,7 +9,7 @@ header {
     column-gap: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     header {
         grid-template-columns: unset;
     }
@@ -78,6 +78,11 @@ header {
             width: 100%;
         }
 
+@media only screen and (max-width: 800px) {
+    .top-menu {
+        display: block;
+    }
+}
 
 .colour-theme-toggle-container {
     position: absolute;
