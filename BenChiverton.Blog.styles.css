@@ -228,7 +228,7 @@ header[b-d8tbz6w8ht] {
     column-gap: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     header[b-d8tbz6w8ht] {
         grid-template-columns: unset;
     }
@@ -297,6 +297,11 @@ header[b-d8tbz6w8ht] {
             width: 100%;
         }
 
+@media only screen and (max-width: 800px) {
+    .top-menu[b-d8tbz6w8ht] {
+        display: block;
+    }
+}
 
 .colour-theme-toggle-container[b-d8tbz6w8ht] {
     position: absolute;
