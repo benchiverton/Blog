@@ -1,5 +1,4 @@
 @inject IResourceService _resourceService;
-@inject NavigationManager _navigationManager;
 
 <div class="widget-container">
     @foreach (var resource in _resources)
@@ -9,10 +8,13 @@
 </div>
 
 @code {
+    [Parameter]
+    public string SearchText { get; set; }
+
     private IReadOnlyDictionary<string, ResourceDetails> _resources;
 
     protected override void OnParametersSet()
     {
-        _resources = _resourceService.GetResources();
+        _resources = _resourceService.GetResources(SearchText);
     }
 }

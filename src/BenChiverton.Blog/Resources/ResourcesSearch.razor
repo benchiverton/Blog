@@ -1,0 +1,38 @@
+@inject IJSRuntime _jsRuntime;
+
+<div class="resources-search-container">
+    <input @ref="searchInputElement" class="resources-search-box" value="@_searchText" @oninput="FilterChangedAsync" placeholder="@_placeholder" />
+</div>
+
+@code {
+    [Parameter]
+    public string InitialSearchText { get; set; }
+    [Parameter]
+    public Action<string> OnSearchTextChanged { get; set; }
+    [Parameter]
+    public bool AutoFocus { get; set; }
+
+    private readonly string _placeholder = "Search...";
+    
+    private ElementReference searchInputElement;
+    private string _searchText;
+
+    protected override void OnParametersSet()
+    {
+        _searchText = InitialSearchText;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && AutoFocus)
+        {
+            await _jsRuntime.InvokeVoidAsync("BlazorFocusElement", searchInputElement);
+        }
+    }
+
+    private void FilterChangedAsync(ChangeEventArgs args)
+    {
+        _searchText = args.Value.ToString();
+        OnSearchTextChanged.Invoke(_searchText);
+    }
+}

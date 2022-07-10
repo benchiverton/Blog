@@ -3,6 +3,9 @@
 @using BenChiverton.Blog.About;
 @using BenChiverton.Blog.Blogs;
 @using BenChiverton.Blog.Projects;
+@using BenChiverton.Blog.Resources;
+
+@inject NavigationManager _navigationManager;
 
 <AboutSummary />
 
@@ -11,8 +14,24 @@
         <h2>Projects</h2>
         <ProjectWidget MaxProjects="5" />
     </div>
-    <div class="blog-widget">
-        <h2>Blogs</h2>
-        <BlogWidget MaxBlogs="5" />
+    <div class="resources-and-blog-widget">
+        <div class="resources-widget">
+            <h2>Resources</h2>
+            <div class="resources-search">
+                <ResourcesSearch InitialSearchText=""
+                                 OnSearchTextChanged="@OnResourcesSearchTextUpdated" />
+            </div>
+        </div>
+        <div class="blog-widget">
+            <h2>Blogs</h2>
+            <BlogWidget MaxBlogs="5" />
+        </div>
     </div>
 </div>
+
+@code {
+    private void OnResourcesSearchTextUpdated(string searchText)
+    {
+        _navigationManager.NavigateTo($"resources/{searchText}");
+    }
+}

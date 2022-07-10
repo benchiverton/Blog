@@ -1,0 +1,10 @@
+.resources-search-box {
+    font-size: 1rem;
+    width: 100%;
+    border-color: var(--green);
+    border-width: 2px;
+    border-radius: 2px;
+    border-style: solid;
+    outline-width: 3px;
+    outline-color: var(--green);
+}

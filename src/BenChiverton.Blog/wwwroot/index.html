@@ -75,6 +75,15 @@
         function readLocalStorage(key) { return localStorage[key]; }
     </script>
 
+    <!-- auto focus functionality for SPA -->
+    <script>
+        function BlazorFocusElement(element) {
+            if (element instanceof HTMLElement) {
+                element.focus();
+            }
+        }
+    </script>
+
     <!-- mermaid libraries used in blogs -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>

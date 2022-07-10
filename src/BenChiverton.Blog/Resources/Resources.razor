@@ -1,5 +1,30 @@
-@page "/resources"
+@page "/resources/{initialsearchtext?}"
 
-<h2>Resources</h2>
+<div class="resources-top">
+    <h2>Resources</h2>
+    <div class="resources-search">
+        <ResourcesSearch InitialSearchText="@InitialSearchText"
+                         OnSearchTextChanged="@OnSearchTextChanged"
+                         AutoFocus="true" />
+    </div>
+</div>
 
-<ResourcesWidget></ResourcesWidget>
+<ResourcesWidget SearchText="@_searchText" />
+
+@code {
+    [Parameter]
+    public string InitialSearchText { get; set; }
+
+    private string _searchText;
+
+    protected override void OnParametersSet()
+    {
+        _searchText = InitialSearchText ?? string.Empty;
+    }
+
+    private void OnSearchTextChanged(string newSearchText)
+    {
+        _searchText = newSearchText;
+        StateHasChanged();
+    }
+}

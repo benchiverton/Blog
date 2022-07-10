@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BenChiverton.Blog.Resources;
 
 public interface IResourceService
 {
-    IReadOnlyDictionary<string, ResourceDetails> GetResources();
+    IReadOnlyDictionary<string, ResourceDetails> GetResources(string filter);
     bool TryGetResourceDetails(string projectId, out ResourceDetails projectDetails);
 }
 
@@ -50,7 +51,10 @@ public class ResourceService : IResourceService
         },
     };
 
-    public IReadOnlyDictionary<string, ResourceDetails> GetResources() => _resources;
+    public IReadOnlyDictionary<string, ResourceDetails> GetResources(string filter) => _resources.Where(r =>
+        r.Value.Name.Contains(filter, System.StringComparison.OrdinalIgnoreCase)
+        || r.Value.Tags.Any(t => t.Contains(filter, System.StringComparison.OrdinalIgnoreCase))
+    ).ToDictionary(x => x.Key, x => x.Value);
 
     public bool TryGetResourceDetails(string resourceId, out ResourceDetails resourceDetails) => _resources.TryGetValue(resourceId, out resourceDetails);
 }
