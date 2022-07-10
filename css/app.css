@@ -17,13 +17,7 @@ body {
     font-family: 'Inconsolata', monospace;
 }
 
-button {
-    background-color: var(--background-color);
-    color: var(--font-color);
-    font-family: 'Inconsolata', monospace;
-}
-
-select {
+button, select, input {
     background-color: var(--background-color);
     color: var(--font-color);
     font-family: 'Inconsolata', monospace;
