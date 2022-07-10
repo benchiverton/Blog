@@ -22,7 +22,7 @@ public class ResourceService : IResourceService
                     { "Question", "https://editor.p5js.org/benchiverton/sketches/TsIZcnLm2" },
                     { "Solution", "https://editor.p5js.org/benchiverton/sketches/sD2UgZ210" },
                 },
-                new List<string> { "exercise", "JavaScript", "p5.js", }
+                new List<string> { "JavaScript", "p5.js", }
             )
         },
         {
@@ -34,7 +34,7 @@ public class ResourceService : IResourceService
                     { "Question", "https://editor.p5js.org/benchiverton/sketches/MlOkyPOCn" },
                     { "Solution", "https://editor.p5js.org/benchiverton/sketches/yzg0EGjCJ" },
                 },
-                new List<string> { "exercise", "JavaScript", "p5.js", }
+                new List<string> { "JavaScript", "p5.js", }
             )
         },
         {
@@ -46,7 +46,7 @@ public class ResourceService : IResourceService
                     { "Question", "https://editor.p5js.org/benchiverton/sketches/OXtuzLfV6" },
                     { "Solution", "https://editor.p5js.org/benchiverton/sketches/7Vv1fnlvj" },
                 },
-                new List<string> { "exercise", "JavaScript", "p5.js", }
+                new List<string> { "JavaScript", "p5.js", }
             )
         },
     };
