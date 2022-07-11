@@ -16,3 +16,14 @@
         height: 0;
     }
 }
+
+.extra-splitter {
+    border: none;
+    border-top: solid var(--green);
+}
+
+.about-extra-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+}
