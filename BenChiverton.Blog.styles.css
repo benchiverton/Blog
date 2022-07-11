@@ -79,6 +79,9 @@
 
 .resources-widget[b-6vpnm4whpw] {
     display: flex;
+    border-style: dashed;
+    border-color: var(--green);
+    padding: 10px;
 }
 
 .resources-search[b-6vpnm4whpw] {
