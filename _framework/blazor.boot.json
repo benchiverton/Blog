@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "BenChiverton.Blog.dll": "sha256-d3hC8m+JT6nJF8LwXZKygY4R0iVCBMIx5o0GJhF06cA=",
+      "BenChiverton.Blog.dll": "sha256-cwJyGOz7ZzMs7jegPTcKNp6YfqOL5JSImEPaKHfVCxA=",
       "Markdig.dll": "sha256-\/qKhOo2ZbkSd56j45qUCUGYRyBMnR0dmDkWfZfLJKeo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-aUELlIsbcBrw+fNUUh8gSy8+Aiq+1hBc9NwFV74OS1I=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-FvoaspJYsirT3JIBNQvEC+Ppjse2JprqQjY6Iav4JbU=",
