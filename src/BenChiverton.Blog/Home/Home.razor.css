@@ -10,6 +10,9 @@
 
 .resources-widget {
     display: flex;
+    border-style: dashed;
+    border-color: var(--green);
+    padding: 10px;
 }
 
 .resources-search {

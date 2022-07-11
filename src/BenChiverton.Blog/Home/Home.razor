@@ -10,11 +10,13 @@
 <AboutSummary />
 
 <div class="widget-container">
-    <div class="project-widget">
-        <h2>Projects</h2>
-        <ProjectWidget MaxProjects="5" />
+    <div class="blog-widget">
+        <div class="blog-widget">
+            <h2>Blogs</h2>
+            <BlogWidget MaxBlogs="5" />
+        </div>
     </div>
-    <div class="resources-and-blog-widget">
+    <div class="resources-and-project-widget">
         <div class="resources-widget">
             <h2>Resources</h2>
             <div class="resources-search">
@@ -22,10 +24,8 @@
                                  OnSearchTextChanged="@OnResourcesSearchTextUpdated" />
             </div>
         </div>
-        <div class="blog-widget">
-            <h2>Blogs</h2>
-            <BlogWidget MaxBlogs="5" />
-        </div>
+        <h2>Projects</h2>
+        <ProjectWidget MaxProjects="5" />
     </div>
 </div>
 
