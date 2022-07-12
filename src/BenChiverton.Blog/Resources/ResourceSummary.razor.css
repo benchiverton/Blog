@@ -15,7 +15,7 @@
 
 .download-link, .resource-link {
     cursor: pointer;
-    color: -webkit-link
+    color: var(--link-color);
 }
 
     .download-link:hover, .resource-link:hover {
