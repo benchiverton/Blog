@@ -26,6 +26,18 @@ public class ResourceService : IResourceService
             )
         },
         {
+            "evolutionofit",
+            new ResourceDetails(
+                "Evolution of IT",
+                new Dictionary<string, string>
+                {
+                    {"Evolution_of_IT.pptx", "BenChiverton.Blog.Resources.Downloads.evolution_of_IT.evolution_of_IT.pptx" }
+                },
+                new Dictionary<string, string>(),
+                new List<string> { "PowerPoint" }
+            )
+        },
+        {
             "trapeziumruleexercise",
             new ResourceDetails(
                 "Trapezium rule exercise",
