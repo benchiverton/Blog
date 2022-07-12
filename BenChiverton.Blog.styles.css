@@ -194,16 +194,17 @@
     font-size: 1em;
 }
 
-.resource-link[b-enxl0y0fu0] {
+.download-link[b-enxl0y0fu0], .resource-link[b-enxl0y0fu0] {
     cursor: pointer;
+    color: -webkit-link
 }
 
-    .resource-link:hover[b-enxl0y0fu0] {
+    .download-link:hover[b-enxl0y0fu0], .resource-link:hover[b-enxl0y0fu0] {
         color: var(--green);
         text-decoration: underline;
     }
 
-.tags[b-enxl0y0fu0]{
+.tags[b-enxl0y0fu0] {
     font-style: italic;
     font-size: 0.8rem;
 }
