@@ -1,20 +1,38 @@
+@using System.Reflection
 @inject NavigationManager _navigationManager
 @inject IJSRuntime _jsRuntime;
 
 <div class="summary-container">
     <div class="name-text">@ResourceDetails.Name</div>
-    <div class="links">
-        @("Links: ")
-        @foreach (var link in ResourceDetails.ResourceLinks)
-        {
-            <a class="resource-link" href="@link.Value" target="_blank">[@link.Key]</a>
-            @(" ")
-        }
-    </div>
-    <div class="tags">
-        @("Tags: ")
-        @string.Join(", ", ResourceDetails.Tags)
-    </div>
+    @if (ResourceDetails.Downloads.Any())
+    {
+        <div class="downloads">
+            @("Downloads: ")
+            @foreach (var download in ResourceDetails.Downloads)
+            {
+                <a class="download-link" @onclick="async () => await DownloadFileFromDownloadsFolder(download.Key, download.Value)">[@download.Key]</a>
+                @(" ")
+            }
+        </div>
+    }
+    @if (ResourceDetails.ResourceLinks.Any())
+    {
+        <div class="links">
+            @("Links: ")
+            @foreach (var link in ResourceDetails.ResourceLinks)
+            {
+                <a class="resource-link" href="@link.Value" target="_blank">[@link.Key]</a>
+                @(" ")
+            }
+        </div>
+    }
+    @if (ResourceDetails.Tags.Any())
+    {
+        <div class="tags">
+            @("Tags: ")
+            @string.Join(", ", ResourceDetails.Tags)
+        </div>
+    }
 </div>
 
 @code {
@@ -23,4 +41,14 @@
 
     [Parameter]
     public ResourceDetails ResourceDetails { get; set; }
+
+
+    private async Task DownloadFileFromDownloadsFolder(string fileName, string fileLocation)
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        using var stream = assembly.GetManifestResourceStream(fileLocation);
+        using var dotNetStreamRef = new DotNetStreamReference(stream);
+
+        await _jsRuntime.InvokeVoidAsync("downloadFileFromStream", fileName, dotNetStreamRef);
+    }
 }

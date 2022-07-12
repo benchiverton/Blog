@@ -14,9 +14,22 @@ public class ResourceService : IResourceService
     private readonly Dictionary<string, ResourceDetails> _resources = new()
     {
         {
+            "powerpointtemplate",
+            new ResourceDetails(
+                "PowerPoint template",
+                new Dictionary<string, string>
+                {
+                    {"PowerPoint_TEMPLATE.pptx", "BenChiverton.Blog.Resources.Downloads.powerpoint_template.template.pptx" }
+                },
+                new Dictionary<string, string>(),
+                new List<string> { "PowerPoint" }
+            )
+        },
+        {
             "trapeziumruleexercise",
             new ResourceDetails(
                 "Trapezium rule exercise",
+                new Dictionary<string, string>(),
                 new Dictionary<string, string>
                 {
                     { "Question", "https://editor.p5js.org/benchiverton/sketches/TsIZcnLm2" },
@@ -29,6 +42,7 @@ public class ResourceService : IResourceService
             "kinematicsexercise",
             new ResourceDetails(
                 "Kinematics exercise",
+                new Dictionary<string, string>(),
                 new Dictionary<string, string>
                 {
                     { "Question", "https://editor.p5js.org/benchiverton/sketches/MlOkyPOCn" },
@@ -41,6 +55,7 @@ public class ResourceService : IResourceService
             "floodfillexercise",
             new ResourceDetails(
                 "Flood fill exercise",
+                new Dictionary<string, string>(),
                 new Dictionary<string, string>
                 {
                     { "Question", "https://editor.p5js.org/benchiverton/sketches/OXtuzLfV6" },
