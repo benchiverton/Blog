@@ -5,11 +5,13 @@
 .light-mode {
     --background-color: #ffffff;
     --font-color: #121212;
+    --link-color: -webkit-link;
 }
 
 .dark-mode {
     --background-color: #121212;
     --font-color: #ffffff;
+    --link-color: #90EE90;
 }
 
 body {

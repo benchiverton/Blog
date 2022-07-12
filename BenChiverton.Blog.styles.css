@@ -196,7 +196,7 @@
 
 .download-link[b-enxl0y0fu0], .resource-link[b-enxl0y0fu0] {
     cursor: pointer;
-    color: -webkit-link
+    color: var(--link-color);
 }
 
     .download-link:hover[b-enxl0y0fu0], .resource-link:hover[b-enxl0y0fu0] {
