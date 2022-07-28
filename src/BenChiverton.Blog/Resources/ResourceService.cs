@@ -14,6 +14,34 @@ public class ResourceService : IResourceService
     private readonly Dictionary<string, ResourceDetails> _resources = new()
     {
         {
+            "microsoftdocsdomainmodelling",
+            new ResourceDetails(
+                "Microsoft docs - domain modelling",
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>
+                {
+                    { "Domain analysis", "https://docs.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis" },
+                    { "Identify microservice boundaries", "https://docs.microsoft.com/en-us/azure/architecture/microservices/model/microservice-boundaries" },
+                },
+                new List<string> { "Microsoft", "Architecture", "Domain" }
+            )
+        },
+        {
+            "microsoftdocsmicroservices",
+            new ResourceDetails(
+                "Microsoft docs - microservices",
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>
+                {
+                    { "Interservice communication", "https://docs.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication" },
+                    { "API gateways", "https://docs.microsoft.com/en-us/azure/architecture/microservices/design/gateway" },
+                    { "Design patterns", "https://docs.microsoft.com/en-us/azure/architecture/microservices/design/patterns" },
+                    { "Migrate monolith to microservices", "https://docs.microsoft.com/en-us/azure/architecture/microservices/migrate-monolith" },
+                },
+                new List<string> { "Microsoft", "Architecture", "Microservices" }
+            )
+        },
+        {
             "powerpointtemplate",
             new ResourceDetails(
                 "PowerPoint template",
