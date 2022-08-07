@@ -11,15 +11,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.302
     - name: Publish with dotnet
       run: dotnet publish ${{ env.PROJECT_LOCATION }}${{ env.PROJECT_FILE }} --configuration Release --output ${{ env.BUILD_LOCATION }}
     - name: Deploy to Github Pages
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
