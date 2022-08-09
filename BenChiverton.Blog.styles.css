@@ -8,10 +8,6 @@
     margin: 20px;
 }
 
-.spacer[b-ytffqlzly3] {
-    height: 50px;
-}
-
 @media only screen and (max-width: 600px) {
     .spacer[b-ytffqlzly3] {
         height: 0;
@@ -27,6 +23,22 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 2rem;
+}
+
+.samuel-johnson-container[b-ytffqlzly3] {
+    min-height: 120px;
+    contain: content;
+}
+
+.samuel-johnson-quote[b-ytffqlzly3] {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.samuel-johnson-image[b-ytffqlzly3] {
+    max-width: 100px;
+    float: left;
+    border-radius: 50%;
 }
 /* /About/AboutSummary.razor.rz.scp.css */
 .about-container[b-y6cm1bcxkq] {
@@ -194,16 +206,6 @@
     font-size: 1em;
 }
 
-.download-link[b-enxl0y0fu0], .resource-link[b-enxl0y0fu0] {
-    cursor: pointer;
-    color: var(--link-color);
-}
-
-    .download-link:hover[b-enxl0y0fu0], .resource-link:hover[b-enxl0y0fu0] {
-        color: var(--green);
-        text-decoration: underline;
-    }
-
 .tags[b-enxl0y0fu0] {
     font-style: italic;
     font-size: 0.8rem;
@@ -291,8 +293,10 @@ header[b-d8tbz6w8ht] {
     overflow: hidden;
     z-index: 1;
     font-size: 1.2em;
+    height: 1.2em;
     border: hidden;
     cursor: pointer;
+    fill: var(--font-color);
 }
 
     .nav-button[b-d8tbz6w8ht]:after {
@@ -320,10 +324,15 @@ header[b-d8tbz6w8ht] {
 
     .nav-button:hover[b-d8tbz6w8ht] {
         color: #fff;
+        fill: #fff;
     }
 
         .nav-button:hover[b-d8tbz6w8ht]:before {
             width: 100%;
+        }
+
+        .nav-button:hover svg path[b-d8tbz6w8ht] {
+            fill: #fff;
         }
 
 @media only screen and (max-width: 800px) {

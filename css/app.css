@@ -31,6 +31,10 @@ app {
     flex-direction: column;
 }
 
+svg.font-icon {
+    fill: var(--font-color);
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -50,6 +54,19 @@ app {
         top: 0.5rem;
     }
 
+
+.link {
+    cursor: pointer;
+    color: var(--link-color);
+}
+
+    .link:hover {
+        color: var(--green);
+        text-decoration: underline;
+    }
+
+/*loading pages*/
+
 .page-loading-text {
     position: absolute;
     top: 30vh;
@@ -57,13 +74,44 @@ app {
     text-align: center;
 }
 
+.loading-spinner {
+    display: inline-block;
+    margin: auto 0 auto 5px;
+    height: 0.2em;
+    width: 0.2em;
+    border: 1.5px solid black;
+    animation: special 1s ease alternate infinite;
+}
+
+@keyframes special {
+    from {
+        border-radius: 0;
+    }
+
+    to {
+        border-radius: 50%;
+    }
+}
+
+@-webkit-keyframes special {
+    from {
+        border-radius: 0;
+    }
+
+    to {
+        border-radius: 50%;
+    }
+}
+
 /*for some reason, the markdown component is playing up with local css...*/
 .markdown-contents table {
     border-collapse: collapse;
 }
+
 .markdown-contents th, td {
     border: 1px solid var(--font-color);
 }
+
 .markdown-contents img {
     max-width: 100%;
 }
