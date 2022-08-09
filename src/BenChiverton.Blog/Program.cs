@@ -2,6 +2,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using BenChiverton.Blog.Blogs;
+using BenChiverton.Blog.Icons;
 using BenChiverton.Blog.Projects;
 using BenChiverton.Blog.Resources;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -23,6 +24,7 @@ public class Program
 
         builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+        builder.Services.AddTransient<IIconService, IconService>();
         builder.Services.AddTransient<IBlogService, BlogService>();
         builder.Services.AddTransient<IProjectService, ProjectService>();
         builder.Services.AddTransient<IResourceService, ResourceService>();

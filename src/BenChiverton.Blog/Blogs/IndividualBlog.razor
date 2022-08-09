@@ -46,9 +46,4 @@ else
     }
 
     private bool IsLoading() => _blogExists.HasValue ? false : true;
-
-    private async Task NavigateToNewTab(string url)
-    {
-        await _jsRuntime.InvokeAsync<object>("open", url, "_blank");
-    }
 }

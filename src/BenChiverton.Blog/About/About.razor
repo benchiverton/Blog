@@ -1,21 +1,50 @@
 @page "/about"
 
+@inject NavigationManager _navigationManager;
+
 <div class="about-text-container">
-    <img class="about-image" src="images/about/profile.png" />
-    <div class="spacer" />
+    <img class="about-image" src="images/about/profile_bike.png" />
     <h2>Who am I?</h2>
-    <h4>TODO</h4>
+    <p>
+        I am <b>Ben Chiverton</b>, and I'm a software engineer.
+        Previously I've designed and developed financial systems (more specifically funds and investments), and now I lead several engineering teams as a 'director of engineering'.
+    </p>
+    <p>
+        My main interests right now are understanding how businesses scale effectively, how systems scale with businesses, and how software engineering teams scale with systems.
+        I'm a big believer in domain driven design - thorough business understanding and bounded contexts are the keys to achieving scalability (at least in my opinion).
+    </p>
+    <p>
+        In my spare time, I mess around with new tech - particularly in dotnet/python.
+        Check out my <a class="link" href="/projects">projects</a> to see what I've been messing around with recently.
+    </p>
     <h2>What is this site?</h2>
-    <h4>TODO</h4>
+    <p>
+        This site is a home for projects/blogs I've been working on, and a personal index for resources that I regularly refer to.
+    </p>
+    <p>
+        The blogs and projects are primarily software based, discussing engineering concepts I find interesting or demonstrating something I've hacked together whilst messing around with some new tech.
+        The resources are anything from software documentation to coding exercises to articles I enjoyed reading - the tags are the best way to search for similar resources.
+    </p>
     <hr class="extra-splitter" />
     <div class="about-extra-container">
         <div>
             <h2>Home</h2>
-            <h4>TODO</h4>
+            <p>
+                I rent a flat in Camden, London, which is more of a base than a home - it's located near my work, and between where either side of my family live.
+                I've been living in London for the past 5 years, and I continue to enjoy my time here.
+                After all, as Samuel Johnson famously said...
+            </p>
+            <div class="samuel-johnson-container">
+                <img class="samuel-johnson-image" src="images/about/Samuel_Johnson_by_Joshua_Reynolds.png" />
+                <p class="samuel-johnson-quote"><i>"When a man is tired of London, he is tired of life, for there is in London all that life can afford."</i></p>
+            </div>
         </div>
         <div>
             <h2>History</h2>
-            <h4>TODO</h4>
+            <p>
+                I grew up in Fleet, Hampshire, and attended Farnborough Sixth Form where I studied maths, further maths and statistics.
+                I went to Warwick University and studied maths and statistics, which I dropped after second year to persue a career in software engineering.
+            </p>
         </div>
     </div>
 </div>

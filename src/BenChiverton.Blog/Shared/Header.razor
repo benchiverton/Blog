@@ -1,4 +1,5 @@
 @inject NavigationManager _navigationManager
+@inject IJSRuntime _jsRuntime
 
 <header>
     <div class="logo-container">
@@ -16,6 +17,9 @@
         </button>
         <button class="nav-button" @onclick="@(() => Navigate("About"))">
             About
+        </button>
+        <button class="nav-button" @onclick="@(async () => await NavigateToNewTab("https://www.linkedin.com/in/benjamin-chiverton/"))" formtarget="_blank">
+            <SvgIcon Icon="IconType.LinkedIn" />
         </button>
     </nav>
     <div class="colour-theme-toggle-container">
@@ -37,6 +41,11 @@
     private void Navigate(string page)
     {
         _navigationManager.NavigateTo(page);
+    }
+
+    private async Task NavigateToNewTab(string url)
+    {
+        await _jsRuntime.InvokeAsync<object>("open", url, "_blank");
     }
 
     private bool IsInitialColourTheme(ColourTheme theme) => theme == InitialColourTheme;

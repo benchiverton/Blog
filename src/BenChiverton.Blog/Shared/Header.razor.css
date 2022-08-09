@@ -43,8 +43,10 @@ header {
     overflow: hidden;
     z-index: 1;
     font-size: 1.2em;
+    height: 1.2em;
     border: hidden;
     cursor: pointer;
+    fill: var(--font-color);
 }
 
     .nav-button:after {
@@ -72,10 +74,15 @@ header {
 
     .nav-button:hover {
         color: #fff;
+        fill: #fff;
     }
 
         .nav-button:hover:before {
             width: 100%;
+        }
+
+        .nav-button:hover svg path {
+            fill: #fff;
         }
 
 @media only screen and (max-width: 800px) {

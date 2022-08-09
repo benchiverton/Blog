@@ -13,16 +13,6 @@
     font-size: 1em;
 }
 
-.download-link, .resource-link {
-    cursor: pointer;
-    color: var(--link-color);
-}
-
-    .download-link:hover, .resource-link:hover {
-        color: var(--green);
-        text-decoration: underline;
-    }
-
 .tags {
     font-style: italic;
     font-size: 0.8rem;

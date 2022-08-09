@@ -10,7 +10,7 @@
             @("Downloads: ")
             @foreach (var download in ResourceDetails.Downloads)
             {
-                <a class="download-link" @onclick="async () => await DownloadFileFromDownloadsFolder(download.Key, download.Value)">[@download.Key]</a>
+                <a class="link" @onclick="async () => await DownloadFileFromDownloadsFolder(download.Key, download.Value)">[@download.Key]</a>
                 @(" ")
             }
         </div>
@@ -21,7 +21,7 @@
             @("Links: ")
             @foreach (var link in ResourceDetails.ResourceLinks)
             {
-                <a class="resource-link" href="@link.Value" target="_blank">[@link.Key]</a>
+                <a class="link" href="@link.Value" target="_blank">[@link.Key]</a>
                 @(" ")
             }
         </div>

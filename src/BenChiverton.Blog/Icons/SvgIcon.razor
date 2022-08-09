@@ -1,0 +1,25 @@
+@inject IIconService _iconService;
+
+<svg width="@Width" height="@Height" viewBox="@_viewBox">
+    <path fill="@Fill" d="@_pathData" />
+</svg>
+
+@code {
+    [Parameter]
+    public IconType Icon { get; set; }
+    [Parameter]
+    public string Fill { get; set; } = string.Empty;
+    [Parameter]
+    public string Height { get; set; } = "1em";
+    [Parameter]
+    public string Width { get; set; } = "1em";
+    
+    private string _viewBox;
+    private string _pathData;
+
+    protected override void OnParametersSet()
+    {
+        _viewBox = _iconService.GetViewBox(Icon);
+        _pathData = _iconService.GetPathData(Icon);
+    }
+}

@@ -7,10 +7,6 @@
     margin: 20px;
 }
 
-.spacer {
-    height: 50px;
-}
-
 @media only screen and (max-width: 600px) {
     .spacer {
         height: 0;
@@ -26,4 +22,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 2rem;
+}
+
+.samuel-johnson-container {
+    min-height: 120px;
+    contain: content;
+}
+
+.samuel-johnson-quote {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.samuel-johnson-image {
+    max-width: 100px;
+    float: left;
+    border-radius: 50%;
 }

@@ -42,6 +42,18 @@ public class ResourceService : IResourceService
             )
         },
         {
+            "okrs",
+            new ResourceDetails(
+                "OKRs",
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>
+                {
+                    { "How to Create Good OKRs 🎯", "https://refactoring.fm/p/how-to-create-good-okrs-" },
+                },
+                new List<string> { "OKRs", "Process" }
+            )
+        },
+        {
             "powerpointtemplate",
             new ResourceDetails(
                 "PowerPoint template",
