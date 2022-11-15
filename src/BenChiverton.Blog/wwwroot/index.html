@@ -73,6 +73,13 @@
         }(window.location))
     </script>
 
+    <!-- open in new tab -->
+    <script>
+        window.blazorOpen = (args) => {
+            window.open(args);
+        };
+    </script>
+
     <!-- local storage -->
     <script>
         function addToLocalStorage(key, value) { localStorage[key] = value; }

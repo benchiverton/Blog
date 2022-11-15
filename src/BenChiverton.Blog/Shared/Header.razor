@@ -45,7 +45,7 @@
 
     private async Task NavigateToNewTab(string url)
     {
-        await _jsRuntime.InvokeAsync<object>("open", url, "_blank");
+        await _jsRuntime.InvokeVoidAsync("blazorOpen", url, "_blank");
     }
 
     private bool IsInitialColourTheme(ColourTheme theme) => theme == InitialColourTheme;
