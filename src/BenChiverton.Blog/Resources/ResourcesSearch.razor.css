@@ -3,8 +3,9 @@
     width: 100%;
     border-color: var(--green);
     border-width: 2px;
-    border-radius: 2px;
+    border-radius: 20px;
     border-style: solid;
     outline-width: 3px;
     outline-color: var(--green);
+    padding-left: 10px;
 }

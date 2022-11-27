@@ -10,13 +10,10 @@
 
 .resources-widget {
     display: flex;
-    border-style: dashed;
-    border-color: var(--green);
     padding: 10px;
 }
 
 .resources-search {
-    margin-left: auto;
     padding: 10px;
     margin-top: auto;
     margin-bottom: auto;

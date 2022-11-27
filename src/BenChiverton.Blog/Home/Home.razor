@@ -9,6 +9,14 @@
 
 <AboutSummary />
 
+<div class="resources-widget">
+    <h2>Find resources</h2>
+    <div class="resources-search">
+        <ResourcesSearch InitialSearchText=""
+                         OnSearchTextChanged="@OnResourcesSearchTextUpdated" />
+    </div>
+</div>
+
 <div class="widget-container">
     <div class="blog-widget">
         <div class="blog-widget">
@@ -17,13 +25,6 @@
         </div>
     </div>
     <div class="resources-and-project-widget">
-        <div class="resources-widget">
-            <h2>Resources</h2>
-            <div class="resources-search">
-                <ResourcesSearch InitialSearchText=""
-                                 OnSearchTextChanged="@OnResourcesSearchTextUpdated" />
-            </div>
-        </div>
         <h2>Projects</h2>
         <ProjectWidget MaxProjects="5" />
     </div>

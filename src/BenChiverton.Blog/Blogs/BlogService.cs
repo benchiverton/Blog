@@ -16,7 +16,7 @@ public class BlogService : IBlogService
             "TestContainers",
             new BlogDetails(
                 "Integration testing with testcontainers",
-                "Without provisioning dedicated infrastructure, integration testing can be hard to get into the CICD pipeline. Testcontainers can bridge this gap.",
+                "Without provisioning dedicated infrastructure, integration testing can be hard to get into the CICD pipeline. Testcontainers can help bridge this gap.",
                 "https://raw.githubusercontent.com/benchiverton/DotNet.IntegrationTesting/main/docs/testing_with_testcontainers.md"
             )
         },
