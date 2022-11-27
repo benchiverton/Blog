@@ -53,7 +53,7 @@ svg.font-icon {
     overflow: visible;
     z-index: 1;
     font-size: 1.2em;
-    height: 1.2em;
+    height: 1.5em;
     border: hidden;
     cursor: pointer;
     fill: var(--header-font-color);
