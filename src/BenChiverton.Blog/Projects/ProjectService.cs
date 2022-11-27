@@ -22,6 +22,15 @@ public class ProjectService : IProjectService
             )
         },
         {
+            "TestContainers",
+            new ProjectDetails(
+                "Integration testing with testcontainers",
+                "Example .NET integration tests using testcontainers to set up infrastructure on the fly.",
+                "https://github.com/benchiverton/DotNet.IntegrationTesting",
+                "https://raw.githubusercontent.com/benchiverton/DotNet.IntegrationTesting/main/README.md"
+            )
+        },
+        {
             "TweetVisualiser",
             new ProjectDetails(
                 "Tweet Visualiser",
