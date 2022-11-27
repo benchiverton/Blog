@@ -128,3 +128,7 @@ app {
 .markdown-contents tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
+
+.markdown-contents img {
+    max-width: 100%;
+}
