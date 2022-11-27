@@ -4,9 +4,9 @@
 @inject HttpClient _httpClient;
 @inject IJSRuntime _jsRuntime;
 
-@if (!IsLoading())
+@if (_loaded)
 {
-    if (_blogExists.Value)
+    if (_blogExists)
     {
         @if (!string.IsNullOrEmpty(_readmeContent))
         {
@@ -32,7 +32,8 @@ else
     [Parameter]
     public string BlogId { get; set; }
 
-    private bool? _blogExists;
+    private bool _blogExists;
+    private bool _loaded = false;
     private BlogDetails _blogDetails;
 
     private string _readmeContent;
@@ -40,10 +41,13 @@ else
     protected override async Task OnParametersSetAsync()
     {
         _blogExists = _blogService.TryGetBlogDetails(BlogId, out _blogDetails);
+        _loaded = true;
+        if (!_blogExists)
+        {
+            return;
+        }
 
         var readmePage = await _httpClient.GetAsync(_blogDetails.MarkdownUrl);
         _readmeContent = (await readmePage.Content.ReadAsStringAsync()).ReplaceRelativeImageLocations(_blogDetails.MarkdownUrl);
     }
-
-    private bool IsLoading() => _blogExists.HasValue ? false : true;
 }
