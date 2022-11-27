@@ -1,17 +1,28 @@
 .footer-container {
     width: 100%;
-    background-color: var(--background-color);
+    color: var(--footer-font-color);
+    background-color: var(--footer-background-color);
     position: absolute;
     bottom: 0;
     border-top: solid;
     border-color: var(--green);
 }
 
+button, select, input {
+    background-color: var(--footer-background-color);
+    color: var(--footer-font-color);
+    font-family: Inconsolata;
+}
+
+svg.font-icon {
+    fill: var(--footer-font-color);
+}
+
 .source-code-button {
     height: 50px;
     border: hidden;
-    color: var(--font-color);
-    background-color: var(--background-color);
+    color: var(--footer-font-color);
+    background-color: var(--footer-background-color);
     cursor: pointer;
     min-width: fit-content;
     z-index: 1;

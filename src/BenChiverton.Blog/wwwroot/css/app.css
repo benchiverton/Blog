@@ -5,12 +5,20 @@
 .light-mode {
     --background-color: #ffffff;
     --font-color: #121212;
+    --header-background-color: #121212;
+    --header-font-color: #ffffff;
+    --footer-background-color: #121212;
+    --footer-font-color: #ffffff;
     --link-color: -webkit-link;
 }
 
 .dark-mode {
     --background-color: #121212;
     --font-color: #ffffff;
+    --header-background-color: #121212;
+    --header-font-color: #ffffff;
+    --footer-background-color: #121212;
+    --footer-font-color: #ffffff;
     --link-color: #90EE90;
 }
 
@@ -30,14 +38,14 @@ button, select, input {
     font-family: Inconsolata;
 }
 
+svg.font-icon {
+    fill: var(--font-color);
+}
+
 app {
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-svg.font-icon {
-    fill: var(--font-color);
 }
 
 #blazor-error-ui {
