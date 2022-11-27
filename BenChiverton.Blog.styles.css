@@ -217,18 +217,29 @@
 /* /Shared/Footer.razor.rz.scp.css */
 .footer-container[b-gvtmglbr7o] {
     width: 100%;
-    background-color: var(--background-color);
+    color: var(--footer-font-color);
+    background-color: var(--footer-background-color);
     position: absolute;
     bottom: 0;
     border-top: solid;
     border-color: var(--green);
 }
 
+button[b-gvtmglbr7o], select[b-gvtmglbr7o], input[b-gvtmglbr7o] {
+    background-color: var(--footer-background-color);
+    color: var(--footer-font-color);
+    font-family: Inconsolata;
+}
+
+svg.font-icon[b-gvtmglbr7o] {
+    fill: var(--footer-font-color);
+}
+
 .source-code-button[b-gvtmglbr7o] {
     height: 50px;
     border: hidden;
-    color: var(--font-color);
-    background-color: var(--background-color);
+    color: var(--footer-font-color);
+    background-color: var(--footer-background-color);
     cursor: pointer;
     min-width: fit-content;
     z-index: 1;
@@ -251,12 +262,23 @@
 header[b-d8tbz6w8ht] {
     width: 100%;
     position: relative;
-    background-color: var(--background-color);
+    color: var(--header-font-color);
+    background-color: var(--header-background-color);
     border-bottom: solid;
     border-color: var(--green);
     display: grid;
     grid-template-columns: 150px 300px;
     column-gap: 50px;
+}
+
+button[b-d8tbz6w8ht], select[b-d8tbz6w8ht], input[b-d8tbz6w8ht] {
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+    font-family: Inconsolata;
+}
+
+svg.font-icon[b-d8tbz6w8ht] {
+    fill: var(--header-font-color);
 }
 
 @media only screen and (max-width: 800px) {
@@ -296,7 +318,7 @@ header[b-d8tbz6w8ht] {
     height: 1.2em;
     border: hidden;
     cursor: pointer;
-    fill: var(--font-color);
+    fill: var(--header-font-color);
 }
 
     .nav-button[b-d8tbz6w8ht]:after {
@@ -307,7 +329,7 @@ header[b-d8tbz6w8ht] {
         width: 100%;
         height: 100%;
         z-index: -2;
-        background-color: var(--background-color);
+        background-color: var(--header-background-color);
     }
 
     .nav-button[b-d8tbz6w8ht]:before {
