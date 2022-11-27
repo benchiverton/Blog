@@ -109,9 +109,10 @@ svg.font-icon {
 
 .colour-theme-toggle-select {
     width: 100%;
-    margin: 10px;
-    height: 25px;
+    margin: 11px;
+    height: 28px;
     border-color: var(--green);
     border-width: 2px;
-    border-radius: 2px;
+    border-radius: 20px;
+    padding-left: 10px;
 }
