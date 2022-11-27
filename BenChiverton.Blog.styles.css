@@ -369,11 +369,12 @@ svg.font-icon[b-d8tbz6w8ht] {
 
 .colour-theme-toggle-select[b-d8tbz6w8ht] {
     width: 100%;
-    margin: 10px;
-    height: 25px;
+    margin: 11px;
+    height: 28px;
     border-color: var(--green);
     border-width: 2px;
-    border-radius: 2px;
+    border-radius: 20px;
+    padding-left: 10px;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .container[b-5sn7flarxt] {
