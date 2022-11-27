@@ -13,7 +13,6 @@ header {
 button, select, input {
     background-color: var(--header-background-color);
     color: var(--header-font-color);
-    font-family: Inconsolata;
 }
 
 svg.font-icon {
@@ -51,7 +50,7 @@ svg.font-icon {
     width: max-content;
     min-width: max-content;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     z-index: 1;
     font-size: 1.2em;
     height: 1.2em;
