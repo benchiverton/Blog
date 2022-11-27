@@ -228,7 +228,6 @@
 button[b-gvtmglbr7o], select[b-gvtmglbr7o], input[b-gvtmglbr7o] {
     background-color: var(--footer-background-color);
     color: var(--footer-font-color);
-    font-family: Inconsolata;
 }
 
 svg.font-icon[b-gvtmglbr7o] {
@@ -274,7 +273,6 @@ header[b-d8tbz6w8ht] {
 button[b-d8tbz6w8ht], select[b-d8tbz6w8ht], input[b-d8tbz6w8ht] {
     background-color: var(--header-background-color);
     color: var(--header-font-color);
-    font-family: Inconsolata;
 }
 
 svg.font-icon[b-d8tbz6w8ht] {
@@ -312,7 +310,7 @@ svg.font-icon[b-d8tbz6w8ht] {
     width: max-content;
     min-width: max-content;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     z-index: 1;
     font-size: 1.2em;
     height: 1.2em;

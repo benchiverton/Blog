@@ -23,19 +23,19 @@
 }
 
 @font-face {
-    font-family: Inconsolata;
-    src: url(../fonts/Inconsolata.ttf);
+    font-family: NunitoSans;
+    src: url(../fonts/NunitoSans-Regular.ttf);
 }
 
 body {
     margin: 0px;
-    font-family: Inconsolata;
+    font-family: NunitoSans;
 }
 
 button, select, input {
     background-color: var(--background-color);
     color: var(--font-color);
-    font-family: Inconsolata;
+    font-family: NunitoSans;
 }
 
 svg.font-icon {
