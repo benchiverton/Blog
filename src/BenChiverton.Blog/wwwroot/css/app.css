@@ -117,14 +117,14 @@ app {
 }
 
 /*for some reason, the markdown component is playing up with local css...*/
-.markdown-contents table {
-    border-collapse: collapse;
+.markdown-contents thead tr th {
+    border-bottom: 2px solid var(--green);
 }
 
-.markdown-contents th, td {
-    border: 1px solid var(--font-color);
+.markdown-contents tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-.markdown-contents img {
-    max-width: 100%;
+.markdown-contents tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
