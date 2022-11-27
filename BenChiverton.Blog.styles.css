@@ -6,6 +6,7 @@
     max-width: 200px;
     float: right;
     margin: 20px;
+    border-radius: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -50,6 +51,7 @@
     max-width: 200px;
     float: right;
     margin: 20px;
+    border-radius: 20px;
 }
 
 .spacer[b-y6cm1bcxkq] {
@@ -102,13 +104,10 @@
 
 .resources-widget[b-6vpnm4whpw] {
     display: flex;
-    border-style: dashed;
-    border-color: var(--green);
     padding: 10px;
 }
 
 .resources-search[b-6vpnm4whpw] {
-    margin-left: auto;
     padding: 10px;
     margin-top: auto;
     margin-bottom: auto;
@@ -185,10 +184,11 @@
     width: 100%;
     border-color: var(--green);
     border-width: 2px;
-    border-radius: 2px;
+    border-radius: 20px;
     border-style: solid;
     outline-width: 3px;
     outline-color: var(--green);
+    padding-left: 10px;
 }
 /* /Resources/ResourceSummary.razor.rz.scp.css */
 .summary-container[b-enxl0y0fu0] {
