@@ -14,15 +14,20 @@
     --link-color: #90EE90;
 }
 
+@font-face {
+    font-family: Inconsolata;
+    src: url(../fonts/Inconsolata.ttf);
+}
+
 body {
     margin: 0px;
-    font-family: 'Inconsolata', monospace;
+    font-family: Inconsolata;
 }
 
 button, select, input {
     background-color: var(--background-color);
     color: var(--font-color);
-    font-family: 'Inconsolata', monospace;
+    font-family: Inconsolata;
 }
 
 app {
