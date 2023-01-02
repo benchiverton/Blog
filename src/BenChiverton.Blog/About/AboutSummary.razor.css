@@ -10,10 +10,6 @@
     border-radius: 20px;
 }
 
-.spacer {
-    height: 50px;
-}
-
 @media only screen and (max-width: 600px) {
     .spacer {
         height: 0;
