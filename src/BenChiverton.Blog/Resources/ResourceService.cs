@@ -42,6 +42,20 @@ public class ResourceService : IResourceService
             )
         },
         {
+            "technicalmanagementandleadership",
+            new ResourceDetails(
+                "Technical management and leadership",
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>
+                {
+                    { "Refacoring technical leadership blogs (paid)", "https://refactoring.fm/about" },
+                    { "HBS leadership blogs", "https://online.hbs.edu/blog/?topic=Leadership" },
+                    { "HBS management blogs", "https://online.hbs.edu/blog/?topic=Management" },
+                },
+                new List<string> { "Management", "Leadership" }
+            )
+        },
+        {
             "okrs",
             new ResourceDetails(
                 "OKRs",
@@ -81,6 +95,18 @@ public class ResourceService : IResourceService
                     { "Engineering growth at Medium", "https://medium.engineering/engineering-growth-at-medium-4935b3234d25" },
                 },
                 new List<string> { "Management", "Leadership" }
+            )
+        },
+        {
+            "leadershipmanagementtraining",
+            new ResourceDetails(
+                "Leadership and management training",
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>
+                {
+                    { "Which HBS online leadership and management course is right for you?", "https://online.hbs.edu/blog/post/management-and-leadership-courses-online" },
+                },
+                new List<string> { "Management", "Leadership", "Training" }
             )
         },
         {
