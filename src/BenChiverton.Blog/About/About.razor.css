@@ -1,4 +1,5 @@
 .about-container {
+    display: inline-block;
 }
 
 .about-image {
