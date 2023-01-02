@@ -163,7 +163,7 @@
     cursor: pointer;
 }
 /* /Resources/Resources.razor.rz.scp.css */
-.resources-top[b-i2slopvpm2]{
+.resources-top[b-i2slopvpm2] {
     display: flex;
 }
 
@@ -183,7 +183,6 @@
     border-style: solid;
     outline-width: 3px;
     outline-color: var(--green);
-    padding-left: 10px;
 }
 /* /Resources/ResourceSummary.razor.rz.scp.css */
 .summary-container[b-enxl0y0fu0] {
