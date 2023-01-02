@@ -54,6 +54,36 @@ public class ResourceService : IResourceService
             )
         },
         {
+            "delegation",
+            new ResourceDetails(
+                "Delegation",
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>
+                {
+                    { "How to delegate effectively: 9 tips for managers (HBS)", "https://online.hbs.edu/blog/post/how-to-delegate-effectively" },
+                },
+                new List<string> { "Management", "Leadership" }
+            )
+        },
+        {
+            "careerframeworks",
+            new ResourceDetails(
+                "Career frameworks",
+                new Dictionary<string, string>
+                {
+                    { "Matrix framework - CircleCI.xlsx", "BenChiverton.Blog.Resources.Downloads.career_frameworks.circle_ci.xlsx" },
+                    { "Matrix framework - Rent The Runway.xlsx", "BenChiverton.Blog.Resources.Downloads.career_frameworks.rent_the_runway.xlsx" },
+                    { "Simple level progression - Etsy.pdf", "BenChiverton.Blog.Resources.Downloads.career_frameworks.etsy.pdf" },
+                },
+                new Dictionary<string, string>
+                {
+                    { "Career Frameworks — Part 1", "https://refactoring.fm/p/career-frameworks-1" },
+                    { "Engineering growth at Medium", "https://medium.engineering/engineering-growth-at-medium-4935b3234d25" },
+                },
+                new List<string> { "Management", "Leadership" }
+            )
+        },
+        {
             "powerpointtemplate",
             new ResourceDetails(
                 "PowerPoint template",
