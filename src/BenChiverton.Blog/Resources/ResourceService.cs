@@ -75,6 +75,7 @@ public class ResourceService : IResourceService
                 new Dictionary<string, string>
                 {
                     { "How to delegate effectively: 9 tips for managers (HBS)", "https://online.hbs.edu/blog/post/how-to-delegate-effectively" },
+                    { "Management Time: Who’s Got the Monkey? (HBR)", "https://hbr.org/1999/11/management-time-whos-got-the-monkey" },
                 },
                 new List<string> { "Management", "Leadership" }
             )
