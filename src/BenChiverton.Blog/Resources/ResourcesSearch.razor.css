@@ -1,6 +1,6 @@
 .resources-search-box {
+    padding-left: 10px;
     font-size: 1rem;
-    width: 100%;
     border-color: var(--green);
     border-width: 2px;
     border-radius: 20px;
