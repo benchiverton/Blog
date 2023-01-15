@@ -172,8 +172,8 @@
 }
 /* /Resources/ResourcesSearch.razor.rz.scp.css */
 .resources-search-box[b-6n9j3ewqas] {
+    padding-left: 10px;
     font-size: 1rem;
-    width: 100%;
     border-color: var(--green);
     border-width: 2px;
     border-radius: 20px;
