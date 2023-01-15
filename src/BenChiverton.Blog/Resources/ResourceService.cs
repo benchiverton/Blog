@@ -76,6 +76,7 @@ public class ResourceService : IResourceService
                 {
                     { "How to delegate effectively: 9 tips for managers (HBS)", "https://online.hbs.edu/blog/post/how-to-delegate-effectively" },
                     { "Management Time: Who’s Got the Monkey? (HBR)", "https://hbr.org/1999/11/management-time-whos-got-the-monkey" },
+                    { "How to Delegate Effectively 🤝", "https://refactoring.fm/p/how-to-delegate" },
                 },
                 new List<string> { "Management", "Leadership" }
             )
