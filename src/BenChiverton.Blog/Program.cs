@@ -1,6 +1,6 @@
 using System;
 using System.Net.Http;
-using System.Threading.Tasks;
+using BenChiverton.Blog;
 using BenChiverton.Blog.Blogs;
 using BenChiverton.Blog.Icons;
 using BenChiverton.Blog.Projects;
@@ -9,28 +9,20 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace BenChiverton.Blog;
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("app");
 
-public class Program
-{
-    public static async Task Main(string[] args)
-    {
-        var builder = WebAssemblyHostBuilder.CreateDefault(args);
-        builder.RootComponents.Add<App>("app");
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.BrowserConsole()
+    .CreateLogger();
 
-        Log.Logger = new LoggerConfiguration()
-            .WriteTo.BrowserConsole()
-            .CreateLogger();
+builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-        builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddTransient<IIconService, IconService>();
+builder.Services.AddTransient<IBlogService, BlogService>();
+builder.Services.AddTransient<IProjectService, ProjectService>();
+builder.Services.AddTransient<IResourceService, ResourceService>();
 
-        builder.Services.AddTransient<IIconService, IconService>();
-        builder.Services.AddTransient<IBlogService, BlogService>();
-        builder.Services.AddTransient<IProjectService, ProjectService>();
-        builder.Services.AddTransient<IResourceService, ResourceService>();
+var host = builder.Build();
 
-        var host = builder.Build();
-
-        await host.RunAsync();
-    }
-}
+await host.RunAsync();
