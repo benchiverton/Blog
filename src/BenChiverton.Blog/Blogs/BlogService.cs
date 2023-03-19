@@ -13,6 +13,14 @@ public class BlogService : IBlogService
     private readonly Dictionary<string, BlogDetails> _blogs = new()
     {
         {
+            "OpenTelemetry",
+            new BlogDetails(
+                "Distributed tracing in dotnet",
+                "Implementing a distributed tracing solution for a hobby project using OpenTelemetry and Jaeger.",
+                "https://raw.githubusercontent.com/benchiverton/OnlineStore/main/docs/Telemetry/DistributedTracing.md"
+            )
+        },
+        {
             "TestContainers",
             new BlogDetails(
                 "Integration testing with testcontainers",
