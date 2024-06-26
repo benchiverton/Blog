@@ -15,9 +15,9 @@ public class BlogService : IBlogService
         {
             "OpenTelemetry",
             new BlogDetails(
-                "Distributed tracing in dotnet",
-                "Implementing a distributed tracing solution for a hobby project using OpenTelemetry and Jaeger.",
-                "https://raw.githubusercontent.com/benchiverton/OnlineStore/main/docs/Telemetry/DistributedTracing.md"
+                "Distributed monitoring in dotnet",
+                "Implementing a distributed monitoring solution for a hobby project using OpenTelemetry and .NET Aspire.",
+                "https://raw.githubusercontent.com/benchiverton/OnlineStore/main/docs/Telemetry/DistributedMonitoring.md"
             )
         },
         {
