@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BenChiverton.Blog",
   "resources": {
-    "hash": "sha256-5fKmMZZ/0m5dtwlRr5+nd0kztdSuvN2PDlCegssIqMI=",
+    "hash": "sha256-X4Ri7kSBDivAo69FuaOnHYS7q8fI0i5pZbjDxUl2jA0=",
     "jsModuleNative": {
       "dotnet.native.8.0.3.wzxwl5s97r.js": "sha256-D4sYBYmDfH/YekgYRgX959/2RG6k28sJSHmcsn+iikk="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "BenChiverton.Blog.wasm": "sha256-GD9ZAKoaMG1HFUmkHLUnk4voyTMDKpghVRoEMi/qHh8=",
+      "BenChiverton.Blog.wasm": "sha256-g83TThBz3FIheRmHNnjieMG0zef/EMI9JJOz6vAe1xA=",
       "Markdig.wasm": "sha256-uO7lXosI/h/uf1hZo4jpJllItvvHaHS9DTUqUEBb1v8=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-1cq4Jp8ZGgWXrkYmNhBQ8dIv/eQK4dqFslv7m5jCKp0=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-2rt4NtUKepq1gEfrnuy0srUHuqwqgvV9Anvfo5T7zbY=",
@@ -49,7 +49,7 @@
       "System.Private.Uri.wasm": "sha256-hA4hvjVexchrmQjPK8EMDK7l6F+Oee8dvI+jylEu034=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-YF+i3upGQEs6CLfUuCXsTw9a34DHd2X3RZNfrlS6va4=",
       "System.Runtime.InteropServices.wasm": "sha256-y44m3d0iQ8Lv/3VC+aW/pfrsCkz0T33tsn7+hfbSshU=",
-      "System.Runtime.wasm": "sha256-NzUD/vGvv4Zn883dmShSPhCrmmdeeqXVC8UiZmwRc4w=",
+      "System.Runtime.wasm": "sha256-z5kxA6tInKtgSPep2LO3sx0EKfWPEBXNFbEmqjCHzSc=",
       "System.Text.Encodings.Web.wasm": "sha256-+S0wf2kqGPTrUhZsRDLwQRqEKz/q7O/TNctcfwbpPPU=",
       "System.Text.Json.wasm": "sha256-tLsqyevDytKtcDL6uixYEvKpL41eUd5Cvk2ZrZMBQJ0=",
       "System.Text.RegularExpressions.wasm": "sha256-LF7AJH6XIuVQaa4L2gypP0UObfK1pPEBSoMbjfyzV9U=",

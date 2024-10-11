@@ -27,20 +27,20 @@
     grid-gap: 2rem;
 }
 
-.samuel-johnson-container[b-ytffqlzly3] {
+.home-picture-container[b-ytffqlzly3] {
     min-height: 120px;
     contain: content;
 }
 
-.samuel-johnson-quote[b-ytffqlzly3] {
+.home-picture-quote[b-ytffqlzly3] {
     text-align: center;
     vertical-align: middle;
 }
 
-.samuel-johnson-image[b-ytffqlzly3] {
+.home-picture-image[b-ytffqlzly3] {
     max-width: 100px;
     float: left;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 /* /About/AboutSummary.razor.rz.scp.css */
 .about-container[b-y6cm1bcxkq] {
