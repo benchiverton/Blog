@@ -82,6 +82,18 @@ public class ResourceService : IResourceService
             )
         },
         {
+            "developerroadmaps",
+            new ResourceDetails(
+                "Developer roadmaps",
+                [],
+                new Dictionary<string, string>
+                {
+                    { "Roadmap.sh", "https://roadmap.sh" },
+                },
+                ["Development", "Learning"]
+            )
+        },
+        {
             "careerframeworks",
             new ResourceDetails(
                 "Career frameworks",
