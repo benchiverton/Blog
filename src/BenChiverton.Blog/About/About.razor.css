@@ -26,18 +26,18 @@
     grid-gap: 2rem;
 }
 
-.samuel-johnson-container {
+.home-picture-container {
     min-height: 120px;
     contain: content;
 }
 
-.samuel-johnson-quote {
+.home-picture-quote {
     text-align: center;
     vertical-align: middle;
 }
 
-.samuel-johnson-image {
+.home-picture-image {
     max-width: 100px;
     float: left;
-    border-radius: 50%;
+    border-radius: 20px;
 }
