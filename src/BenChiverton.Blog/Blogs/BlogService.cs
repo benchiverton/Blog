@@ -13,6 +13,14 @@ public class BlogService : IBlogService
     private readonly Dictionary<string, BlogDetails> _blogs = new()
     {
         {
+            "AsyncApi",
+            new BlogDetails(
+                "Enhance your API's using async messaging.",
+                "How to use asynchronous messaging concepts to create high performance API's, avoiding issues caused by synchronous RPC calls.",
+                "https://raw.githubusercontent.com/benchiverton/AsyncApiDemo/refs/heads/main/docs/async-api-blog.md"
+            )
+        },
+        {
             "OpenTelemetry",
             new BlogDetails(
                 "Distributed monitoring in dotnet",
