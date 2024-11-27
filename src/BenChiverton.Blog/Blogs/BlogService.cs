@@ -15,8 +15,8 @@ public class BlogService : IBlogService
         {
             "AsyncApi",
             new BlogDetails(
-                "Enhance your API's using async messaging.",
-                "How to use asynchronous messaging concepts to create high performance API's, avoiding issues caused by synchronous RPC calls.",
+                "Asynchronous messaging in synchronous API's",
+                "Implement asynchronous messaging concepts to create high-performance APIs, avoiding issues caused by synchronous RPC calls.",
                 "https://raw.githubusercontent.com/benchiverton/AsyncApiDemo/refs/heads/main/docs/async-api-blog.md"
             )
         },
