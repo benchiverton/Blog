@@ -21,6 +21,9 @@
         <button class="nav-button" @onclick="@(async () => await NavigateToNewTab("https://www.linkedin.com/in/benjamin-chiverton/"))" formtarget="_blank">
             <SvgIcon Icon="IconType.LinkedIn" />
         </button>
+        <button class="nav-button" @onclick="@(async () => await NavigateToNewTab("https://github.com/benchiverton"))" formtarget="_blank">
+            <SvgIcon Icon="IconType.GitHub" />
+        </button>
     </nav>
     <div class="colour-theme-toggle-container">
         <select class="colour-theme-toggle-select" @onchange="ChangingTheme">
