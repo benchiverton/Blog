@@ -1,7 +1,7 @@
 @page "/blogpage/{BlogId}"
 
 @inject IBlogService _blogService;
-@inject HttpClient _httpClient;
+@inject IMarkdownService _markdownService;
 @inject IJSRuntime _jsRuntime;
 
 @if (_loaded)
@@ -47,7 +47,6 @@ else
             return;
         }
 
-        var readmePage = await _httpClient.GetAsync(_blogDetails.MarkdownUrl);
-        _readmeContent = (await readmePage.Content.ReadAsStringAsync()).ReplaceRelativeImageLocations(_blogDetails.MarkdownUrl);
+        _readmeContent = await _markdownService.GetMarkdown(_blogDetails.MarkdownPage);
     }
 }

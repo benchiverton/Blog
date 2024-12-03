@@ -1,7 +1,7 @@
 @page "/project/{ProjectId}"
 
 @inject IProjectService _projectService;
-@inject HttpClient _httpClient;
+@inject IMarkdownService _markdownService;
 @inject IJSRuntime _jsRuntime;
 
 @if (!IsLoading())
@@ -48,8 +48,7 @@ else
     {
         _projectExists = _projectService.TryGetProjectDetails(ProjectId, out _projectDetails);
 
-        var readmePage = await _httpClient.GetAsync(_projectDetails.ReadmeUrl);
-        _readmeContent = (await readmePage.Content.ReadAsStringAsync()).ReplaceRelativeImageLocations(_projectDetails.ReadmeUrl);
+        _readmeContent = await _markdownService.GetMarkdown(_projectDetails.MarkdownPage);
     }
 
     private bool IsLoading() => _projectExists.HasValue ? false : true;

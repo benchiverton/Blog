@@ -1,5 +1,6 @@
 @inject IBlogService _blogService
-@inject NavigationManager _navigationManager;
+@inject IMarkdownService _markdownService
+@inject NavigationManager _navigationManager
 
 <div class="widget-container">
     @foreach (var blog in _blogs)
@@ -21,7 +22,7 @@
     private IReadOnlyDictionary<string, BlogDetails> _blogs;
     private bool _isLimited;
 
-    protected override void OnParametersSet()
+    protected override async Task OnParametersSetAsync()
     {
         var blogs = _blogService.GetBlogs();
         if (MaxBlogs.HasValue)
@@ -33,6 +34,11 @@
         {
             _blogs = blogs;
             _isLimited = false;
+        }
+
+        foreach (var blog in _blogs.Values)
+        {
+            blog.Published = await _markdownService.GetPublishedDate(blog.MarkdownPage);
         }
     }
 

@@ -1,8 +1,12 @@
+using BenChiverton.Blog.Markdown;
+
 namespace BenChiverton.Blog.Projects;
 
 public record ProjectDetails(
     string Name,
     string Description,
-    string ProjectUrl,
-    string ReadmeUrl
-);
+    MarkdownPage MarkdownPage
+)
+{
+    public string ProjectUrl => $"https://github.com/{MarkdownPage.Organisation}/{MarkdownPage.Repository}";
+}

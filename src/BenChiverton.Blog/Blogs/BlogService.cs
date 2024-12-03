@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BenChiverton.Blog.Markdown;
 
 namespace BenChiverton.Blog.Blogs;
 
@@ -17,7 +18,7 @@ public class BlogService : IBlogService
             new BlogDetails(
                 "Asynchronous messaging in synchronous APIs",
                 "Implement asynchronous messaging concepts to create high-performance APIs, avoiding issues caused by synchronous RPC calls.",
-                "https://raw.githubusercontent.com/benchiverton/AsyncApiDemo/refs/heads/main/docs/async-api-blog.md"
+                new MarkdownPage("benchiverton", "AsyncApiDemo", "main", "docs/async-api-blog.md")
             )
         },
         {
@@ -25,7 +26,7 @@ public class BlogService : IBlogService
             new BlogDetails(
                 "Distributed monitoring in dotnet",
                 "Implementing a distributed monitoring solution for a hobby project using OpenTelemetry and .NET Aspire.",
-                "https://raw.githubusercontent.com/benchiverton/OnlineStore/main/docs/Telemetry/DistributedMonitoring.md"
+                new MarkdownPage("benchiverton", "OnlineStore", "main", "docs/Telemetry/DistributedMonitoring.md")
             )
         },
         {
@@ -33,7 +34,7 @@ public class BlogService : IBlogService
             new BlogDetails(
                 "Integration testing with testcontainers",
                 "Without provisioning dedicated infrastructure, integration testing can be hard to get into the CICD pipeline. Testcontainers can help bridge this gap.",
-                "https://raw.githubusercontent.com/benchiverton/DotNet.IntegrationTesting/main/docs/testing_with_testcontainers.md"
+                new MarkdownPage("benchiverton", "DotNet.IntegrationTesting", "main", "docs/testing_with_testcontainers.md")
             )
         },
         {
@@ -41,7 +42,7 @@ public class BlogService : IBlogService
             new BlogDetails(
                 "Installing Docker on Windows (without Docker Desktop!)",
                 "I don't use Docker enough in my day to day to justify a Docker Desktop license - these are the steps I follow to install Docker onto WSL.",
-                "https://raw.githubusercontent.com/benchiverton/DotNet.IntegrationTesting/main/docs/installing_docker_windows.md"
+                new MarkdownPage("benchiverton", "DotNet.IntegrationTesting", "main", "docs/installing_docker_windows.md")
             )
         },
         {
@@ -49,7 +50,7 @@ public class BlogService : IBlogService
             new BlogDetails(
                 "Modelling Neurons",
                 "Developing a model for an artificial neuron, and deriving its output formula from scratch.",
-                "https://raw.githubusercontent.com/benchiverton/GingerbreadAI/main/docs/NerualNetwork/NeuralNetworks.md"
+                new MarkdownPage("benchiverton", "GingerbreadAI", "main", "docs/NerualNetwork/NeuralNetworks.md")
             )
         },
     };
