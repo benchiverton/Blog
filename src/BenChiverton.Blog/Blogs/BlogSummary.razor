@@ -3,7 +3,7 @@
 <div class="summary-container" @onclick="NavigateToBlog">
     <div class="name-text">@BlogDetails.Name</div>
     <div class="description-text">@BlogDetails.Description</div>
-    <div class="published-date"><i>@BlogDetails.Published?.ToString("D")</i></div>
+    <div class="published-date"><i>@(BlogDetails.Published?.ToString("D") ?? "...")</i></div>
 </div>
 
 @code {
