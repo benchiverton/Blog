@@ -38,14 +38,6 @@ public class ProjectService : IProjectService
             )
         },
         {
-            "OutboxPattern",
-            new ProjectDetails(
-                "Outbox Pattern",
-                ".NET applications that help visualise the outbox pattern by implementing it in several ways. Usese Web API's and NServiceBus.",
-                new MarkdownPage("benchiverton", "OutboxPatternDemo", "main", "README.md")
-            )
-        },
-        {
             "OnlineStore",
             new ProjectDetails(
                 "Online Store",

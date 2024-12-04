@@ -46,6 +46,14 @@ public class BlogService : IBlogService
             )
         },
         {
+            "OutboxPattern",
+            new BlogDetails(
+                "Outbox Pattern for consistency in distributed systems",
+                "Implement the outbox pattern to reliably deliver messages, ensuring your distributed system remains consistent.",
+                new MarkdownPage("benchiverton", "OutboxPatternDemo", "main", "README.md")
+            )
+        },
+        {
             "ModellingNeurons",
             new BlogDetails(
                 "Modelling Neurons",
