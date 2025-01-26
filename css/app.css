@@ -121,14 +121,14 @@ app {
     border-bottom: 2px solid var(--green);
 }
 
-.markdown-contents tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
 .markdown-contents tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
 .markdown-contents img {
     max-width: 100%;
+}
+
+a:any-link {
+    color: var(--link-color);
 }
