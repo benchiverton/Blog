@@ -26,7 +26,7 @@ public class BlogService : IBlogService
             new BlogDetails(
                 "Distributed monitoring in dotnet",
                 "Implementing a distributed monitoring solution for a hobby project using OpenTelemetry and .NET Aspire.",
-                new MarkdownPage("benchiverton", "OnlineStore", "main", "docs/Telemetry/DistributedMonitoring.md")
+                new MarkdownPage("benchiverton", "Blog", "main", "docs/Telemetry/DistributedMonitoring.md")
             )
         },
         {
