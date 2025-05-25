@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BenChiverton.Blog",
   "resources": {
-    "hash": "sha256-I/UkwnmUWkDfYR+dLe8S9LufkVBAHC7HhincXzDPk8I=",
+    "hash": "sha256-zHrbIHln2iNN7R9Jcz9uC4VMos173giSkvicG9P9Rk8=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "BenChiverton.Blog.wasm": "sha256-B9ZuEEovlKMpBZKgPEb+PEmKOhe2pxnQ3cCSTvOuMcQ=",
+      "BenChiverton.Blog.wasm": "sha256-o92bdqCudiev7MTxUwpWU0uyC67WfJ2jyoeTxLGqFV4=",
       "Markdig.wasm": "sha256-uO7lXosI/h/uf1hZo4jpJllItvvHaHS9DTUqUEBb1v8=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-VJ45rzSA710mZAGB/sn+R90WTwsTBEcPG5hpd7zgHTw=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-y1q8xkEJzEMm6ZLY3tqaj3cD2lgTnwJFEZ0QvB3zzjQ=",
