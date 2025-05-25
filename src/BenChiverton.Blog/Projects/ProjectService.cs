@@ -38,14 +38,6 @@ public class ProjectService : IProjectService
             )
         },
         {
-            "OnlineStore",
-            new ProjectDetails(
-                "Online Store",
-                "Blazor WebAssembly application simulating an online store. Deployed to Azure using Github Actions and Terraform. Has a complete CI/CD pipeline.",
-                new MarkdownPage("benchiverton", "OnlineStore", "main", "README.md")
-            )
-        },
-        {
             "protseqspark",
             new ProjectDetails(
                 "Protein Sequences Spark Library",
