@@ -14,6 +14,14 @@ public class BlogService : IBlogService
     private readonly Dictionary<string, BlogDetails> _blogs = new()
     {
         {
+            "SharedMemory",
+            new BlogDetails(
+                "Low latency messaging with shared memory",
+                "Using memory mapped files to achieve low latency between co-located processes.",
+                new MarkdownPage("benchiverton", "MemoryMessaging", "main", "docs/SharedMemory.md")
+            )
+        },
+        {
             "AsyncApi",
             new BlogDetails(
                 "Asynchronous messaging in synchronous APIs",
