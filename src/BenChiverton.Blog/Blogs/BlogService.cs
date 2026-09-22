@@ -14,6 +14,14 @@ public class BlogService : IBlogService
     private readonly Dictionary<string, BlogDetails> _blogs = new()
     {
         {
+            "LockFreeSnapshots",
+            new BlogDetails(
+                "Lock free snapshots",
+                "Sending a new subscriber a snapshot of the order book, without stalling the delta stream for everyone else.",
+                new MarkdownPage("benchiverton", "Blog", "main", "docs/LockFreeSnapshots/Blog.md")
+            )
+        },
+        {
             "SharedMemory",
             new BlogDetails(
                 "Low latency messaging with shared memory",
